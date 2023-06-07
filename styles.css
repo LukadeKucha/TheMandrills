@@ -2,14 +2,48 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
-    background-color: #2B2B2B;
+    background-color: black;
+}
+
+section {
+    position: relative;
+    height: 832px;
+}
+
+.section-content {
+    margin: 0 auto;
+    margin-top: 7%;
+    width: 90%;
+}
+
+.section-title h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.container {
+    position: relative;
+    background-color: #0A071A;
 }
 
 h1,
-h2,
-p {
+h2 {
+    text-transform: uppercase;
+    font-family: 'Thunder';
+    font-style: normal;
+    line-height: 130%;
+    color: white;
     margin: 0;
     padding: 0;
+}
+
+p {
+    line-height: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .navbar {
@@ -118,10 +152,10 @@ p {
     }
 }
 
+
 /* hero-section */
 
 .hero-section {
-    height: 832px;
     display: flex;
     flex-direction: column;
     background-image: url(./media/landing.png);
@@ -153,7 +187,7 @@ p {
 }
 
 .hero-header h1,
-p {
+.hero-header p {
     font-family: 'Thunder';
     font-style: normal;
     font-weight: 700;
@@ -163,6 +197,7 @@ p {
 }
 
 a.journy {
+    text-decoration: none;
     cursor: pointer;
     display: inline-block;
     margin-top: 2%;
@@ -225,4 +260,83 @@ a.journy:hover {
 
 .socials a {
     cursor: pointer;
+}
+
+.video-container {
+    margin-top: 3%;
+    background-size: cover;
+    height: 720px;
+    background-image: url("./media/video.png");
+}
+
+.text {
+    width: 55%;
+}
+
+/* Colab Section */
+
+.colab-section {
+    height: auto;
+}
+
+.colabs {
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-wrapper {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+}
+
+/* Footer */
+.line {
+    width: 90%;
+    height: 5px;
+    margin: 3% auto;
+    background-color: #333;
+}
+
+
+.footer-content {
+    padding: 2%;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.f-right{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.f-logo{
+    width: 25%;
+}
+.f-right a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Thunder';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 130%;
+}
+
+.f-socials {
+    opacity: 0.8;
+    position: relative;
+    width: 33%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
 }
