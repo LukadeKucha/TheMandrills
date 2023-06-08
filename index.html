@@ -8,23 +8,23 @@
 
 <body>
     <div class="container">
+        <nav class="navbar" id="navbar">
+            <div class="navbar-logo">
+                <img src="./media/logo.png" alt="Logo">
+            </div>
+            <div class="navbar-toggle" onclick="toggleNavbar()">
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+            </div>
+            <div class="navbar-links">
+                <a href="#">prologue</a>
+                <a href="#">mandrills & minerals</a>
+                <a href="#">whitelist & activity</a>
+                <a href="#">collab projects</a>
+            </div>
+        </nav>
         <section class="hero-section" id="hero-section">
-            <nav class="navbar">
-                <div class="navbar-logo">
-                    <img src="./media/logo.png" alt="Logo">
-                </div>
-                <div class="navbar-toggle" onclick="toggleNavbar()">
-                    <div class="toggle-line"></div>
-                    <div class="toggle-line"></div>
-                    <div class="toggle-line"></div>
-                </div>
-                <div class="navbar-links">
-                    <a href="#">prologue</a>
-                    <a href="#">mandrills & minerals</a>
-                    <a href="#">whitelist & activity</a>
-                    <a href="#">collab projects</a>
-                </div>
-            </nav>
             <div class="hero-content">
                 <div class="hero-header">
                     <h1>THE MANDRILLS</h1>
@@ -85,11 +85,105 @@
                         </p>
                     </div>
                 </div>
-                <div class="photo">
-
+                <div class="photo" style="background-image: url(./media/mineral\ \(2\).png);">
+                    
                 </div>
             </div>
         </section>
+
+        <!-- Whitelist & Activities -->
+        <section class="section4">
+            <div class="section-content">
+                <div class="section-title">
+                    <h1>WHITELISTS & ACTIVITIES</h1>
+                </div>
+                <div class="card-container">
+                    <div class="card-nav">
+                        <div class="card-link" id="card-1">
+                            <a class="nav-a" id="wl" onclick="toggleContent('content-1')">01 WHITELISTS</a>
+                        </div>
+                        <div class="card-link" id="card-1">
+                            <a class="nav-a" id="bom" onclick="toggleContent('content-2')">02 BOX OF MYSTERY</a>
+                        </div>
+                        <div class="card-link" id="card-1">
+                            <a class="nav-a" id="giveaways" onclick="toggleContent('content-3')">GIVEAWAYS</a>
+                        </div>
+
+                    </div>
+                    <div class="card-content" id="content-1">
+                        <div class="content-left">
+                            <div class="content-left-text">
+                                <h1>PURMARILL ROLE</h1>
+                                <p>Join our Discord, say Hi, and obtain the Purmarill (Whitelist) role by providing your
+                                    Twitter username and FLR address to purchase Blue Minerals at a discounted price!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="content-right-background">
+                                <img src="./media/card-1.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content" id="content-2">
+                        <div class="content-left">
+                            <div class="content-left-text">
+                                <h1>PCAN YOU OPEN IT?!</h1>
+                                <p>Packed with enchanted prizes from our Road Map. Mastering a powerful spell with
+                                    dedication and belief is the only key to unlocking it, once you achieve it you will
+                                    be eligible to open The Mandrills' Box of Mystery in every 30 Days!</p>
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="content-right-background">
+                                <img src="./media/card-2.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content" id="content-3">
+                        <div class="content-left">
+                            <div class="content-left-text">
+                                <h1>BE ACTIVE AND WIN!</h1>
+                                <p>A question will appear in our Discord Server at a random time within each 12-hour
+                                    window. The first user to select the correct answer will be the winner. Winners will
+                                    be announced during each subsequent giveaway question. </p>
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="content-right-background">
+                                <img src="./media/card-3.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="journy" style="display: flex;
+            width: 12%;
+            align-items: center;
+            justify-content: space-evenly; margin: 2% auto;"><img src="./media/discord.png">Join Discord</a>
+
+            <!-- Wild products & Roadmap -->
+            <div class="section-content">
+                <div class="roadmap">
+                    <div class="roadmap-content">
+                        <div class="section-title">
+                            <h1>WILD PRODUCTS & ROADMAP</h1>
+
+                        </div>
+                        <p>Take the time to familiarize yourself with our Wild products and roadmap. There are many
+                            interconnected benefits between them, and it's not straightforward to determine from which
+                            scenario you will reap the most benefits. Therefore, it's important to read carefully and
+                            chart
+                            your path. Also, don't forget to join our Discord community. Our members are ready and eager
+                            to
+                            assist you in navigating the best choices within the Wild Network ecosystem. Our thriving
+                            community is always open to sharing their experiences!</p>
+                        <a class="journy">START THE JOURNEY</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Colab -->
         <section class="colab-section">
             <div class="section-content">
                 <div class="section-title">
@@ -128,6 +222,7 @@
     </div>
 
     <script src="scripts.js"></script>
+
 </body>
 
 </html>

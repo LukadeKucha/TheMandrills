@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0;
+            background: #0A071A;
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            margin: 0 auto;
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background-color: transparent;
+            position: relative;
+        }
+
+        .navbar-logo {
+            cursor: pointer;
+            margin-left: 5%;
+        }
+
+        .navbar-logo img {
+            width: 80px;
+        }
+
+        .navbar-links {
+            width: 46%;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            cursor: pointer;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.9rem;
+            line-height: 130%;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .toggle-line {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin-bottom: 5px;
+        }
+
+        .hero-header {
+            position: relative;
+            margin: 10% auto;
+            width: 60%;
+            text-align: center;
+        }
+
+        .hero-header h1 {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 5rem;
+            line-height: 130%;
+            color: #FFFFFF;
+        }
+
+        .stage-1 {
+            position: absolute;
+            width: 308px;
+            height: 308px;
+            left: 250px;
+            top: 496px;
+            border-radius: 32px 32px 0px 0px;
+        }
+
+        .stage-2 {
+            position: absolute;
+            width: 308px;
+            height: 308px;
+            left: 610px;
+            top: 496px;
+            border-radius: 32px 32px 0px 0px;
+        }
+
+        .stage-3 {
+            position: absolute;
+            width: 308px;
+            height: 308px;
+            left: 958px;
+            top: 496px;
+            border-radius: 32px 32px 0px 0px;
+        }
+
+        .stage-4 {
+            position: absolute;
+            width: 308px;
+            height: 348px;
+            left: 1322px;
+            top: 496px;
+            background: #FFFFFF;
+            opacity: 0.1;
+            border-radius: 32px;
+        }
+
+        .card-body {
+            cursor: pointer;
+            display: flex;
+            margin-top: 2%;
+            color: white;
+            font-family: Thunder;
+            font-weight: 700;
+            line-height: 22px;
+            padding: 20px 40px;
+            background-color: #FB2576;
+            border-radius: 30px;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            width: 228px;
+            height: 30px;
+            left: 0px;
+            top: 280px;
+        }
+
+        .card-body:hover {
+
+            background-color: #931545;
+        }
+
+        .stages {
+            position: absolute;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 130%;
+            text-align: center;
+            justify-content: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .what {
+            position: absolute;
+            display: flex;
+            left: 125px;
+            right: 125px;
+            top: 105px;
+            bottom: 25px;
+        }
+
+
+        .hero-1 {
+            position: absolute;
+            width: 507px;
+            height: 45px;
+            left: calc(50% - 507px/2 - 386.5px);
+            top: 954px;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .baobab {
+            position: absolute;
+            left: 12.56%;
+            right: 5.56%;
+            top: 1100px;
+            bottom: 36.39%;
+            border-radius: 32px;
+        }
+
+
+
+        /* .gates{
+        cursor: pointer;
+        display: flex;
+        margin-top: 2%;
+        color: white;
+        font-family: Thunder;
+        font-weight: 700;
+        line-height: 22px;
+        padding: 20px 40px;
+        background-color: #FB2576;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+        text-decoration: none;
+        width: 228px;
+        height: 30px;
+    }
+
+    .gate-1{
+padding: 20px 40px;
+gap: 8px;
+left: 37.57%;
+right: 53.26%;
+top: 22231.48%;
+bottom: 63.53%;
+width: 20px;
+height: 22px;
+background: #FB2576;
+border-radius: 100px;
+    }
+
+    .gate-2{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px 40px;
+        gap: 8px;
+        left: 57.57%;
+        width: 60px;
+        height: 22px;
+        right: 32.99%;
+        top: 39.95%;
+        bottom: 59.06%;
+        
+        background: #FB2576;
+        border-radius: 100px;
+    }
+
+    .gate-3{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px 40px;
+        gap: 8px;
+        left: 37.57%;
+        right: 52.99%;
+        width: 60px;
+height: 22px;
+        top: 45.92%;
+        bottom: 53.09%;
+        
+        background: #FB2576;
+        border-radius: 100px;
+    }
+
+    .gate-4{
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 20px 40px;
+gap: 8px;
+left: 57.57%;
+width: 60px;
+height: 22px;
+right: 32.99%;
+top: 50.14%;
+bottom: 48.87%;
+
+background: #FB2576;
+border-radius: 100px;
+    } */
+
+
+        .body-2 {
+            position: absolute;
+            width: 437px;
+            height: 45px;
+
+            top: 4058px;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .image-moon {
+            position: absolute;
+            width: 1280px;
+            height: 720px;
+            left: 215px;
+            top: 4255px;
+            border-radius: 32px;
+        }
+
+
+        .team {
+            position: absolute;
+            width: 97px;
+            height: 45px;
+            left: 215px;
+            top: 5055px;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .team-1 {
+            position: absolute;
+            width: 97px;
+            height: 45px;
+            left: 125px;
+            top: 5165px;
+            padding: -50px;
+        }
+
+        .first {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 80px;
+        }
+
+        .two {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 404px;
+
+        }
+
+        .three {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 728px;
+        }
+
+        .four {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 1052px;
+        }
+
+        .five {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 80px;
+            top: 300px
+        }
+
+        .six {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 404px;
+            top: 300px
+        }
+
+        .seven {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 728px;
+            top: 300px
+        }
+
+        .eight {
+            position: absolute;
+            width: 308px;
+            height: 240px;
+            left: 1052px;
+            top: 300px
+        }
+
+        .giga {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+        .yoska {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+        .kucha {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+
+        .nika {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+
+        .sandry {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+        .giorgi {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+        .giorgi2 {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+        .glenn {
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 116px;
+            height: 21px;
+        }
+
+
+
+        .foot {
+            position: absolute;
+            width: 1280px;
+            height: 4px;
+            left: 190px;
+            top: 5876px;
+            background: #FFFFFF;
+            opacity: 0.1;
+        }
+
+        .foot-logo {
+            position: absolute;
+            width: 92px;
+            height: 99px;
+            left: 190px;
+            top: 5960px;
+        }
+
+        .foot-links {
+
+            opacity: 0.8;
+            position: relative;
+            width: 30%;
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+            align-self: flex-end;
+            top: 5490px;
+            left: 350px;
+        }
+
+        .foot-links a {
+
+            cursor: pointer;
+
+
+        }
+
+        .privacy {
+            position: absolute;
+            width: 92px;
+            height: 14px;
+            left: 1200px;
+            top: 5963px;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+
+        .terms {
+            position: absolute;
+            width: 92px;
+            height: 14px;
+            left: 1350px;
+            top: 5963px;
+            font-family: 'Thunder';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+    </style>>
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <section class="hero-section" id="hero-section">
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <img src="media/logo.png" alt="Logo">
+                </div>
+                <div class="navbar-toggle" onclick="toggleNavbar()">
+                    <div class="toggle-line"></div>
+                    <div class="toggle-line"></div>
+                    <div class="toggle-line"></div>
+                </div>
+                <div class="navbar-links">
+                    <a href="#">Metaverse DAshboard</a>
+                    <a href="#">NFTS</a>
+                    <a href="#">ROADMAP</a>
+                    <a href="#">TEAM</a>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <div class="hero-header">
+                    <h1>WILD PRODUCTS</h1>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="stage-1">
+                    <img src="./media/product1.png" alt="">
+                    <div class="card-body"><a class="stages" href="">BUY NOW</a></div>
+                </div>
+                <div class="stage-2">
+                    <img src="./media/product2.png" alt="">
+                    <div class="card-body"><a class="stages" href="">STAGE 2</a></div>
+                </div>
+                <div class="stage-3">
+                    <img src="./media/product3.png" alt="">
+                    <div class="card-body"><a class="stages" href="">STAGE 3</a></div>
+                </div>
+                <div class="stage-4">
+                    <img class="what" src="./media/product4.png" alt="">
+                    <div class="card-body"><a class="stages" href="">MANDRILLS STARTER PACK</a></div>
+                </div>
+            </div>
+
+
+            <section>
+                <div class="body-1">
+                    <div class="hero-1">
+                        <p>PATH OF THE WILD NETWORK</p>
+                    </div>
+                </div>
+                <div class="baobab">
+                    <img src="./media/xe.png" alt="">
+                    <div class="gate-1">
+                        <div><a class="gates" href="">STAGE 1</a></div>
+                    </div>
+                    <div class="gate-2">
+                        <div> <a class="gates" href="">STAGE 2</a></div>
+                    </div>
+                    <div class="gate-3">
+                        <div>
+                            <a class="gates" href="">STAGE 3</a>
+                        </div>
+                    </div>
+                    <div class="gate-4">
+                        <div>
+                            <a class="gates" href="">STAGE 4</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <section>
+                <div class="body-2">
+                    <p>Progressive Wild Map</p>
+                </div>
+                <div class="image-moon">
+                    <img src="./media/mtvare.png" alt="">
+                </div>
+            </section>
+
+
+
+            <section>
+
+                <div class="team">
+                    <p>TEAM</p>
+                </div>
+                <div class="team-1">
+                    <div class="first">
+                        <img src="./media/team.png" alt="">
+                        <p class="sandry">Sandry lomidze</p>
+                    </div>
+                    <div class="two">
+                        <img src="./media/team.png" alt="">
+                        <p class="giorgi2">Giorgi Chomakhashvili</p>
+                    </div>
+                    <div class="three">
+                        <img src="./media/team.png" alt="">
+                        <p class="glenn">Glenn Schniederss</p>
+                    </div>
+                    <div class="four">
+                        <img src="./media/team.png" alt="">
+                        <p class="giorgi">Giorgi Lezhava</p>
+                    </div>
+                    <div class="five">
+                        <img src="./media/team.png" alt="">
+                        <p class="nika">Nikusha Tetruashvili</p>
+                    </div>
+                    <div class="six">
+                        <img src="./media/team.png" alt="">
+                        <p class="kucha">Luka Kuchaidze</p>
+                    </div>
+                    <div class="seven">
+                        <img src="./media/team.png" alt="">
+                        <p class="yoska">Yoska Shavtvaladze</p>
+                    </div>
+                    <div class="eight">
+                        <img src="./media/team.png" alt="">
+                        <p class="giga">Giga jachvadze</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <footer>
+
+                <div class="foot">
+                    <img src="media/Rectangle 4.png" alt="">
+                </div>
+                <div class="foot-logo">
+                    <img src="media/logo.png" alt="">
+                </div>
+                <div class="foot-links">
+                    <div class="sub"><a href="#"><img src="media/image 9.png" alt=""></a></div>
+                    <div class="discord"><a href="#"><img src="media/image 5.png" alt=""></a></div>
+                    <div class="twitter"><a href="#"><img src="media/image 6.png" alt=""></a></div>
+                    <div class="youtube"><a href="#"><img src="media/image 7.png" alt=""></a></div>
+                    <div class="ragaca"><a href="#"><img src="media/image 8.png" alt=""></a></div>
+                </div>
+
+                <div class="privacy">
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="terms">
+                    <p>TERMS OF SERVICE</p>
+                </div>
+            </footer>
+
+
+
+
+            <script src="script.js"></script>
+</body>
+
+</html>
