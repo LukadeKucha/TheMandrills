@@ -286,16 +286,18 @@ a.journy:hover {
 }
 
 .photo {
+    background-size: contain;
+    background-position: center;
     border-radius: 30px;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: flex-end;
-    height: 635px;
-    width: 100%;    
-    height: 1;
-    margin-left: 3%;  
+
+    width: 100%;
+
+    margin-left: 3%;
     background-color: #220a23;
     max-width: 524px;
-   
 }
 
 /* WL & Activities */
