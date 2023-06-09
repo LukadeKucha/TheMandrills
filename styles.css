@@ -5,6 +5,21 @@ body {
     background-color: black;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: "Thunder";
+    src: url("") format("truetype");
+    /* Add additional src lines for other font file formats if available */
+}
+
 section {
     position: relative;
     height: auto;
@@ -93,7 +108,7 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-}
+}  
 
 .navbar-toggle {
     display: none;
@@ -180,6 +195,8 @@ p {
 }
 
 .hero-section::before {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     content: "";
     position: absolute;
     top: 0;
@@ -281,8 +298,19 @@ a.journy:hover {
     background-image: url("./media/video.png");
 }
 
+
+/* MM */
+
+.mm-section .section-content{
+    display: flex;
+    flex-direction: row;
+}
 .text {
     width: 55%;
+}
+
+.txt1, .txt2{
+    text-align: left;
 }
 
 .photo {
@@ -463,24 +491,35 @@ a.journy:hover {
 }
 
 /* Colab Section */
-
 .colab-section {
     height: auto;
+}
+
+.section-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 20px;
 }
 
 .colabs {
     margin-top: 2%;
     align-items: center;
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.colabs a {
+    margin: 10px;
 }
 
 .btn-wrapper {
     justify-content: center;
-    width: 100%;
     display: flex;
+    margin-top: 20px;
 }
 
 /* Footer */
@@ -530,3 +569,168 @@ a.journy:hover {
     align-items: center;
     display: flex;
 }
+
+/* Products */
+
+/* products section */
+
+.mint-btn {
+    align-items: center;
+    border-radius: 30px;
+    max-width: 70px;
+    width: 100%;
+    background: #821647;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 32px 17px 40px;
+}
+
+.products {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wild-products {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 30px;
+    height: 378px;
+    width: 23%;
+}
+
+.product-gif {
+    height: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 25%;
+    background-color: #FB2576;
+}
+
+.product-btn a {
+    text-decoration: none;
+}
+
+.product-btn h1 {
+    font-size: 1rem;
+}
+
+.pr-tree {
+    height: auto;
+    background-image: url(media/xe.png);
+}
+
+/* Team */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.team-txt {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.team-txt h1 {
+    font-size: 1rem;
+}
+
+.team-txt p {
+    color: #75737e;
+    font-size: 0.8rem;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* RESPONSIVES */
+
+/* colab */
+@media screen and (max-width: 768px) {
+    .colabs {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .colabs {
+        flex-direction: column;
+    }
+}
+
+/* Roadmap */
+
+@media screen and (max-width: 768px) {
+    .roadmap-content {
+        width: 90%;
+    }
+    .roadmap-content p {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .roadmap {
+        height: auto;
+    }
+    .roadmap-content {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Minerals */
+
+@media screen and (max-width: 768px) {
+    .mm-section .section-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        width: 100%;
+    }
+    .photo{
+        max-width: inherit;
+        height: 400px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .colabs {
+        flex-direction: column;
+    }
+}
+
+
+/* Footer */
+
