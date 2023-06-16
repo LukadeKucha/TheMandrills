@@ -10,7 +10,9 @@ body {
 }
 
 video {
-    height: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    height: auto;
     width: 100%;
 }
 
@@ -108,7 +110,7 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-}  
+}
 
 .navbar-toggle {
     display: none;
@@ -301,15 +303,17 @@ a.journy:hover {
 
 /* MM */
 
-.mm-section .section-content{
+.mm-section .section-content {
     display: flex;
     flex-direction: row;
 }
+
 .text {
     width: 55%;
 }
 
-.txt1, .txt2{
+.txt1,
+.txt2 {
     text-align: left;
 }
 
@@ -692,16 +696,18 @@ a.journy:hover {
     .roadmap-content {
         width: 90%;
     }
+
     .roadmap-content p {
         font-size: 0.8rem;
     }
-    
+
 }
 
 @media screen and (max-width: 480px) {
     .roadmap {
         height: auto;
     }
+
     .roadmap-content {
         width: 90%;
         padding: 20px;
@@ -711,14 +717,16 @@ a.journy:hover {
 /* Minerals */
 
 @media screen and (max-width: 768px) {
-    .mm-section .section-content{
+    .mm-section .section-content {
         display: flex;
         flex-direction: column;
     }
-    .text{
+
+    .text {
         width: 100%;
     }
-    .photo{
+
+    .photo {
         max-width: inherit;
         height: 400px;
         margin-left: 0;
@@ -733,4 +741,3 @@ a.journy:hover {
 
 
 /* Footer */
-
