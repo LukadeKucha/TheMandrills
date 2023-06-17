@@ -40,7 +40,7 @@ section {
 
 .container {
     position: relative;
-    background-color: #090418;
+    background-color: rgb(11 7 26);;
 }
 
 h1,
@@ -616,6 +616,7 @@ a.journy:hover {
     height: 75%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .product-btn {
@@ -646,10 +647,11 @@ a.journy:hover {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 .team-txt {
+    text-align: left;
     margin-left: 5%;
     margin-top: 2%;
 }
