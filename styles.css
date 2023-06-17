@@ -25,10 +25,11 @@
     font-size: 1.5rem;
 }
 
-.modal-content h2{
+.modal-content h2 {
     font-family: "Thunder Medium";
     font-size: 1.5rem;
 }
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -123,6 +124,7 @@ p {
     width: 80px;
 }
 
+
 .navbar-links {
     width: 46%;
     justify-content: space-between;
@@ -142,7 +144,7 @@ p {
     color: white;
 }
 
-.navbar-links.active a{
+.navbar-links.active a {
     font-size: 80px;
 }
 
@@ -152,7 +154,7 @@ p {
 }
 
 .toggle-line {
-    width: 25px;   
+    width: 25px;
     height: 4px;
     background-color: white;
     margin-bottom: 5px;
@@ -188,6 +190,7 @@ p {
         z-index: 9999;
         display: block;
     }
+
 
     .navbar-toggle.active .toggle-line:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -253,11 +256,11 @@ p {
     text-align: center;
 }
 
-.hero-header h1
-{
+.hero-header h1 {
     font-family: 'Thunder Bold';
     font-size: 6rem;
 }
+
 .hero-header p {
     font-family: 'Thunder Medium';
     font-style: normal;
@@ -726,26 +729,31 @@ a.journy:hover {
 
 /* colab */
 @media screen and (max-width: 768px) {
-    .footer-content{
+    .footer-content {
         height: 180px;
     }
-    .hero-header{
+
+    .hero-header {
         margin: 24% auto;
         width: 60%;
     }
-    .colabs a{
+
+    .colabs a {
         max-width: 20%;
         margin: 0;
     }
-    .colabs img{
-        width:68%;
+
+    .colabs img {
+        width: 68%;
     }
+
     .colabs {
         justify-content: center;
     }
 }
 
-@media  (max-width: 480px) {
+@media (max-width: 480px) {
+
     /* .f-right{
         width: 45%;
     }
@@ -756,23 +764,28 @@ a.journy:hover {
         width: 100%;
 
     } */
-    .navbar{
+    .navbar {
         padding: 0;
     }
-    .wild-products{
+
+    .wild-products {
         flex-wrap: wrap;
         height: 500px;
     }
-    .product{
+
+    .product {
         width: 45%;
         height: 160px;
     }
-    .section-content{
+
+    .section-content {
         margin-top: 20%;
     }
+
     .navbar-links.active a {
         font-size: 40px;
     }
+
     .colabs {
         flex-direction: column;
     }
@@ -805,9 +818,10 @@ a.journy:hover {
 /* Minerals */
 
 @media screen and (max-width: 768px) {
-    .roadmap-content{
+    .roadmap-content {
         width: 80%;
     }
+
     .mm-section .section-content {
         display: flex;
         flex-direction: column;
@@ -825,20 +839,21 @@ a.journy:hover {
 }
 
 @media screen and (max-width: 480px) {
-    .roadmap-content{
+    .roadmap-content {
         width: 93%;
     }
+
     .colabs {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 768px)
-{
-    .product{
+@media screen and (max-width: 768px) {
+    .product {
         height: 206px;
     }
 }
+
 /* Footer */
 
 
