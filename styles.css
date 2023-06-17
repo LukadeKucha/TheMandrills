@@ -726,6 +726,9 @@ a.journy:hover {
 
 /* colab */
 @media screen and (max-width: 768px) {
+    .footer-content{
+        height: 180px;
+    }
     .hero-header{
         margin: 24% auto;
         width: 60%;
@@ -743,6 +746,16 @@ a.journy:hover {
 }
 
 @media  (max-width: 480px) {
+    /* .f-right{
+        width: 45%;
+    }
+    .f-socials{
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+    } */
     .navbar{
         padding: 0;
     }
@@ -813,7 +826,7 @@ a.journy:hover {
 
 @media screen and (max-width: 480px) {
     .roadmap-content{
-        width: 80%;
+        width: 93%;
     }
     .colabs {
         flex-direction: column;
