@@ -742,7 +742,24 @@ a.journy:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media  (max-width: 480px) {
+    .navbar{
+        padding: 0;
+    }
+    .wild-products{
+        flex-wrap: wrap;
+        height: 500px;
+    }
+    .product{
+        width: 45%;
+        height: 160px;
+    }
+    .section-content{
+        margin-top: 20%;
+    }
+    .navbar-links.active a {
+        font-size: 40px;
+    }
     .colabs {
         flex-direction: column;
     }
@@ -775,6 +792,9 @@ a.journy:hover {
 /* Minerals */
 
 @media screen and (max-width: 768px) {
+    .roadmap-content{
+        width: 80%;
+    }
     .mm-section .section-content {
         display: flex;
         flex-direction: column;
@@ -792,6 +812,9 @@ a.journy:hover {
 }
 
 @media screen and (max-width: 480px) {
+    .roadmap-content{
+        width: 80%;
+    }
     .colabs {
         flex-direction: column;
     }
