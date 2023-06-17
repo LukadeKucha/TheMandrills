@@ -25,7 +25,7 @@
                 <a href="#">metaverse dashboard</a>
                 <a href="#">nft</a>
                 <a href="#">roadmap</a>
-                <a href="#">team</a>
+                <a href="#team">team</a>
                 <div class="mint-btn">
                     <a href="#" class="mint">mint </a>
                     <img src="../media/Vector.png">
@@ -37,6 +37,34 @@
         <!-- Products Section -->
         <section class="products" id="products">
             <div class="section-content">
+                <div id="productModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">X</span>
+                        <h2>Blue-purple heart | The Mandrills</h2>
+                        <h2>Total Supply: 4,444</h2>
+                        <h2>4 Phases of MINT</h2>
+                        <div class="li">
+                            <p>1: qty. 1,111 - 60 USD</p>
+                            <p> 2: qty. 1,111 - 120 USD</p>
+                            <p> 3: qty. 1,111 - 240 USD</p>
+                            <p> 4: qty. (accumulating) - 480 USD</p>
+                        </div>
+                        <p>- Each phase of MINTING lasts 120 Hours
+                            - Purmarill (Whitelists) window lasts 12 Hours
+                            - UNMINTED Minerals will be accumulated in the 4th phase
+                            - Times will be announced through our Twitter and Discord</p>
+                        <p>Users have a chance to purchase them at the lowered price by gaining the Prurmarill
+                            (Whitelist) role in our Discord server by providing a Twitter username and FLR address.</p>
+                        <p>The conversion in FLR will be automatically adjusted during the MINT.</p>
+                        <p>The last 1,111 Minerals will be used in the various activities across the Wild Network
+                            ecosystem</p>
+                        <h2>Once all four phases of Blue Minerals MINT are complete, they can be exchanged for The
+                            Mandrills</h2>
+                        <p>- Exchange window: TBA
+                            - Any unexchanged Mandrills will be burned forever.</p>
+                        <p>The Minerals are gaining their progressive utility in the Wild Network’s life</p>
+                    </div>
+                </div>
                 <div class="section-title" style="text-align: center;">
                     <h1>WILD PRODUCTS</h1>
                 </div>
@@ -46,7 +74,7 @@
                             <video src="../videos/card.mp4" loop autoplay muted></video>
                         </div>
                         <div class="product-btn">
-                            <a href="">
+                            <a id="stage-popup" href="">
                                 <h1>Buy Now</h1>
                             </a>
                         </div>
@@ -91,7 +119,7 @@
                     <h1>PATH OF THE WILD NETWORK</h1>
                 </div>
 
-                <img src="../media/xe.png">
+                <img src="../media/xe.png" style="height: auto; width: 100%;">
             </div>
         </section>
 
@@ -195,6 +223,8 @@
                 </div>
             </div>
         </footer>
+
+
     </div>
     <script>
         window.addEventListener('scroll', function () {
@@ -207,7 +237,27 @@
             } else {
                 navbar.classList.remove('navbar-scrolled');
             }
-        });</script>
+        });
+
+        document.getElementById("stage-popup").addEventListener("click", function (event) {
+            event.preventDefault();
+            var modal = document.getElementById("productModal");
+            var body = document.getElementsByTagName("body")[0];
+            modal.style.display = "flex";
+            body.classList.add("blur-background");
+            body.style.overflow = "hidden";
+        });
+
+        document.getElementsByClassName("close")[0].addEventListener("click", function () {
+            var modal = document.getElementById("productModal");
+            var body = document.getElementsByTagName("body")[0];
+            modal.style.display = "none";
+            body.classList.remove("blur-background");
+            body.style.overflow = "auto";
+        });
+
+    </script>
+    <script src="../scripts.js"></script>
 </body>
 
 </html>

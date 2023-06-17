@@ -1,3 +1,34 @@
+@font-face {
+    font-family: "Thunder Semi-Bold";
+    src: url("fonts/Thunder-SemiBoldLC.ttf") format("truetype");
+
+}
+
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+@font-face {
+    font-family: "Thunder Bold";
+    src: url("fonts/Thunder-BoldLC.ttf") format("truetype");
+
+}
+
+
+@font-face {
+    font-family: "Thunder Medium";
+    src: url("fonts/Thunder-MediumLC.ttf") format("truetype");
+
+}
+
+/* Fonts  */
+.product-btn a h1 {
+    font-family: "Thunder Bold";
+    font-size: 1.5rem;
+}
+
+.modal-content h2{
+    font-family: "Thunder Medium";
+    font-size: 1.5rem;
+}
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -16,11 +47,6 @@ video {
     width: 100%;
 }
 
-@font-face {
-    font-family: "Thunder";
-    src: url("") format("truetype");
-    /* Add additional src lines for other font file formats if available */
-}
 
 section {
     position: relative;
@@ -34,19 +60,21 @@ section {
 }
 
 .section-title h1 {
+    font-family: 'Thunder Bold';
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .container {
     position: relative;
-    background-color: rgb(11 7 26);;
+    background-color: rgb(11 7 26);
+    ;
 }
 
 h1,
 h2 {
     text-transform: uppercase;
-    font-family: 'Thunder';
+    font-family: 'Thunder Semi-Bold';
     font-style: normal;
     line-height: 130%;
     color: white;
@@ -55,6 +83,7 @@ h2 {
 }
 
 p {
+    margin: 0;
     line-height: 1.5rem;
     color: white;
     text-transform: uppercase;
@@ -85,6 +114,7 @@ p {
 
 
 .navbar-logo {
+    z-index: 9999;
     cursor: pointer;
     margin-left: 5%;
 }
@@ -102,14 +132,18 @@ p {
 
 .navbar-links a {
     cursor: pointer;
-    font-family: 'Thunder';
+    font-family: 'Thunder Semi-Bold';
     font-style: normal;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 20px;
     line-height: 130%;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+}
+
+.navbar-links.active a{
+    font-size: 80px;
 }
 
 .navbar-toggle {
@@ -118,9 +152,9 @@ p {
 }
 
 .toggle-line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
+    width: 25px;   
+    height: 4px;
+    background-color: white;
     margin-bottom: 5px;
 }
 
@@ -150,6 +184,8 @@ p {
     }
 
     .navbar-toggle {
+
+        z-index: 9999;
         display: block;
     }
 
@@ -167,14 +203,16 @@ p {
 
     .navbar-toggle.active+.navbar-links {
         flex-direction: column;
-        justify-content: space-around;
-        height: 50vh;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100vh;
         display: flex;
         position: absolute;
-        top: 100%;
+        top: 0;
+        bottom: 0;
         left: 0;
         right: 0;
-        background-color: #f1f1f1;
+        background-color: #0a0719;
         padding: 10px;
     }
 }
@@ -211,13 +249,17 @@ p {
 .hero-header {
     position: relative;
     margin: 10% auto;
-    width: 60%;
+    width: 35%;
     text-align: center;
 }
 
-.hero-header h1,
+.hero-header h1
+{
+    font-family: 'Thunder Bold';
+    font-size: 6rem;
+}
 .hero-header p {
-    font-family: 'Thunder';
+    font-family: 'Thunder Medium';
     font-style: normal;
     font-weight: 700;
     font-size: 5rem;
@@ -226,6 +268,7 @@ p {
 }
 
 a.journy {
+    font-family: 'Thunder Bold';
     max-width: 175%;
     text-transform: uppercase;
     text-decoration: none;
@@ -279,6 +322,7 @@ a.journy:hover {
 }
 
 .socials {
+    bottom: 20px;
     opacity: 0.8;
     position: relative;
     width: 30%;
@@ -361,8 +405,8 @@ a.journy:hover {
 
 .nav-a {
     color: rgba(255, 255, 255, 0.582);
-    font-family: Thunder;
-    font-size: 1.5rem;
+    font-family: "Thunder Semi-Bold";
+    font-size: 20px;
     font-weight: 600;
     line-height: 31px;
     letter-spacing: 0em;
@@ -431,7 +475,7 @@ a.journy:hover {
 }
 
 .content-left-text h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .content-left-text p {
@@ -505,6 +549,7 @@ a.journy:hover {
 }
 
 .section-title {
+    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -558,10 +603,10 @@ a.journy:hover {
     color: #333;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Thunder';
+    font-family: 'Thunder Semi-Bold';
     font-style: normal;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 130%;
 }
 
@@ -657,7 +702,7 @@ a.journy:hover {
 }
 
 .team-txt h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .team-txt p {
@@ -681,6 +726,17 @@ a.journy:hover {
 
 /* colab */
 @media screen and (max-width: 768px) {
+    .hero-header{
+        margin: 24% auto;
+        width: 60%;
+    }
+    .colabs a{
+        max-width: 20%;
+        margin: 0;
+    }
+    .colabs img{
+        width:68%;
+    }
     .colabs {
         justify-content: center;
     }
@@ -741,5 +797,68 @@ a.journy:hover {
     }
 }
 
-
+@media screen and (max-width: 768px)
+{
+    .product{
+        height: 206px;
+    }
+}
 /* Footer */
+
+
+
+/* Product Modal */
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    padding: 40px 48px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background-color: #0a0719;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1280px;
+    max-height: 900px;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.li {
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    position: relative;
+}

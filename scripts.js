@@ -4,6 +4,21 @@ function toggleNavbar() {
     navbarToggle.classList.toggle('active');
     navbarLinks.classList.toggle('active');
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var navbarLinks = document.querySelectorAll('.navbar-links a');
+    for (var i = 0; i < navbarLinks.length; i++) {
+        navbarLinks[i].addEventListener('click', function () {
+            var navbarToggle = document.querySelector('.navbar-toggle');
+            var navbarLinks = document.querySelector('.navbar-links');
+            if (navbarToggle.classList.contains('active')) {
+                navbarToggle.classList.remove('active');
+                navbarLinks.classList.remove('active');
+            }
+        });
+    }
+});
+
 // Navbar scroll
 window.addEventListener('scroll', function () {
     var navbar = document.getElementById('navbar');
