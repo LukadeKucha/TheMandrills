@@ -3,7 +3,16 @@ function toggleNavbar() {
     var navbarLinks = document.querySelector('.navbar-links');
     navbarToggle.classList.toggle('active');
     navbarLinks.classList.toggle('active');
+    if(document.querySelector('.navbar-links').classList.contains('active'))
+    {
+        document.querySelector('.mint-btn').style.display = "none";
+    }
+    else{
+        document.querySelector('.mint-btn').style.display = "flex";
+    }
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var navbarLinks = document.querySelectorAll('.navbar-links a');
