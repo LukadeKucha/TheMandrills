@@ -4,6 +4,12 @@
 
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/FontsFree-Net-Poppins-Regular.ttf") format("truetype");
+
+}
+
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 @font-face {
@@ -34,7 +40,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
-    background-color: black;
+    background-color: #0b071a;
 }
 
 * {
@@ -63,7 +69,7 @@ section {
 .section-title h1 {
     font-family: 'Thunder Bold';
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .container {
@@ -187,7 +193,7 @@ p {
 
     .navbar-toggle {
 
-        margin-right: 5%;
+        margin-right: 10%;
 
         z-index: 9999;
         display: block;
@@ -218,7 +224,7 @@ p {
         left: 0;
         right: 0;
         background-color: #0a0719;
-        padding: 10px;
+        padding: 0;
     }
 }
 
@@ -226,6 +232,7 @@ p {
 /* hero-section */
 
 .hero-section {
+    height: 823px;
     display: flex;
     flex-direction: column;
     background-image: url(./media/landing.png);
@@ -234,7 +241,8 @@ p {
 }
 
 .hero-content {
-    height: 70%;
+    justify-content: center;
+    height: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -253,26 +261,27 @@ p {
 
 .hero-header {
     position: relative;
-    margin: 10% auto;
-    width: 35%;
+    margin: 0 auto;
+    width: 48%;
     text-align: center;
 }
 
 .hero-header h1 {
     font-family: 'Thunder Bold';
-    font-size: 6rem;
+    font-size: 7.5rem;
 }
 
 .hero-header p {
     font-family: 'Thunder Medium';
     font-style: normal;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 2.5rem;
     line-height: 130%;
     color: #FFFFFF;
 }
 
 a.journy {
+    font-size: 1.5rem;
     font-family: 'Thunder Bold';
     max-width: 175%;
     text-transform: uppercase;
@@ -281,7 +290,6 @@ a.journy {
     display: inline-block;
     margin-top: 2%;
     color: white;
-    font-family: Thunder;
     font-weight: 700;
     line-height: 22px;
     padding: 20px 40px;
@@ -358,7 +366,7 @@ a.stage {
     position: absolute;
     width: 9%;
     font-family: "Thunder Bold";
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     background-color: #FB2576;
     border-radius: 30px;
     color: white;
@@ -381,6 +389,12 @@ a.stage {
 .txt1,
 .txt2 {
     text-align: left;
+}
+
+.txt1 h2,
+.txt2 h2 {
+    font-family: "Thunder Medium";
+    font-size: 1.5rem;
 }
 
 .photo {
@@ -428,7 +442,7 @@ a.stage {
 .nav-a {
     color: rgba(255, 255, 255, 0.582);
     font-family: "Thunder Semi-Bold";
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 31px;
     letter-spacing: 0em;
@@ -498,11 +512,11 @@ a.stage {
 }
 
 .content-left-text h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .content-left-text p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .content-right {
@@ -546,7 +560,7 @@ a.stage {
 }
 
 .roadmap-content {
-    width: 50%;
+    width: 55%;
     text-align: center;
     margin: 0 auto;
     align-items: center;
@@ -739,6 +753,35 @@ a.stage {
 }
 
 @media (max-width: 768px) {
+    .hero-header h1 {
+        font-size: 100px;
+    }
+
+    .hero-header p {
+        font-size: 36px;
+    }
+
+    .section-title h1 {
+        font-size: 3rem;
+    }
+
+    .nav-a {
+        font-size: 1rem;
+    }
+
+    .nav-a {
+        font-size: 1rem;
+    }
+
+    .socials {
+        width: 35%;
+        margin-right: 2%;
+    }
+
+    .f-right {
+        font-size: 1rem;
+    }
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -749,16 +792,17 @@ a.stage {
 
 /* colab */
 @media screen and (max-width: 768px) {
-    a.stage{
+    a.stage {
         font-size: 1.2rem;
     }
+
     .footer-content {
         height: 180px;
     }
 
     .hero-header {
-        margin: 24% auto;
-        width: 60%;
+        margin: 0 auto;
+        width: 80%;
     }
 
     .colabs a {
@@ -776,23 +820,102 @@ a.stage {
 }
 
 @media (max-width: 480px) {
-    a.stage{
+    .content-left-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .content-left-text p {
+        font-size: 14px;
+    }
+
+    .f-right a {
+        font-size: 1rem;
+    }
+
+    .txt1 h1,
+    .tx2 h1 {
+        font-size: 20px;
+    }
+
+    .txt1 p,
+    .tx2 p {
+        font-size: 14px;
+    }
+
+    .navbar-logo a img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .socials {
+        bottom: 80px;
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-evenly;
+    }
+
+    .socials a img {
+
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .img1 {
+        height: 14px;
+    }
+
+    .img4 {
+        height: 17px;
+    }
+
+    .hero-section {
+        background-size: cover;
+        height: 521px;
+        background-image: url('./media/mobile-bg.png');
+    }
+
+    .hero-header {
+        width: 58%;
+    }
+
+    .hero-header h1 {
+        font-size: 3rem;
+    }
+
+    .hero-header p {
+        font-size: 1rem;
+    }
+
+    a.journy {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    a.stage {
         font-size: 0.8rem;
     }
-    .f-logo{
-        margin-bottom: 15%;
-    }
-    .f-right{
+
+    .f-logo {
         margin-bottom: 15%;
     }
 
-    .card-container{
+    .f-right {
+        margin-bottom: 15%;
+    }
+
+    .card-container {
         height: 600px;
     }
+
     .section-title h1 {
-        font-size: 2rem;
+        font-size: 28px;
     }
-    .content-left-text{
+
+    .content-left-text {
+        text-align: center;
         width: 100%;
     }
 
@@ -819,11 +942,6 @@ a.stage {
 
     }
 
-    .socials {
-        right: 100px;
-        bottom: 80px;
-        width: 55%;
-    }
 
     .f-right {
         width: 45%;
@@ -838,7 +956,8 @@ a.stage {
     }
 
     .navbar {
-        padding: 0;
+
+        padding: 30px 20px 30px 20px;
     }
 
     .wild-products {
@@ -852,7 +971,7 @@ a.stage {
     }
 
     .section-content {
-        margin-top: 20%;
+        margin-top: 8dvh;
     }
 
     .navbar-links.active a {
@@ -903,6 +1022,7 @@ a.stage {
     }
 
     .photo {
+        margin-top: 5%;
         max-width: inherit;
         height: 400px;
         margin-left: 0;
