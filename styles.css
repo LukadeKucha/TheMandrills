@@ -493,6 +493,7 @@ a.stage {
 }
 
 .content-left-text {
+    text-align: left;
     width: 88%;
 }
 
