@@ -194,12 +194,15 @@ p {
     .section-title {
         margin-bottom: 0 !important;
     }
+
     .section-content {
         margin-top: 8%;
     }
-    .navbar-logo{
+
+    .navbar-logo {
         margin-left: 0;
     }
+
     .navbar-links {
         display: none;
     }
@@ -630,7 +633,8 @@ a.stage {
     width: 90%;
     height: 5px;
     margin: 3% auto;
-    background-color: #333;
+    background-color: #ffff;
+    opacity: 0.1;
 }
 
 
@@ -781,7 +785,7 @@ a.stage {
     }
 
     a.journy {
-        margin-top: 0%;
+        margin-top: 3%;
     }
 
     .navbar-logo img {
@@ -808,7 +812,7 @@ a.stage {
         font-size: 1rem;
     }
 
-   
+
     .socials {
         justify-content: space-between;
         width: 35%;
@@ -1026,7 +1030,7 @@ a.stage {
     }
 
     .roadmap-content p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
 }
@@ -1046,7 +1050,7 @@ a.stage {
 
 @media screen and (max-width: 768px) {
     .roadmap-content {
-        width: 80%;
+        width: 86%;
     }
 
     .mm-section .section-content {
