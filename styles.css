@@ -766,6 +766,9 @@ a.stage {
 }
 
 @media (max-width: 768px) {
+    .navbar-logo img {
+        width: 60px;
+    }
     .hero-header h1 {
         font-size: 100px;
     }
