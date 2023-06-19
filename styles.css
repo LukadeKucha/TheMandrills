@@ -121,6 +121,11 @@ p {
 .navbar-scrolled {
     background-color: rgba(10, 7, 26, 0.85);
 
+
+}
+
+.navbar-scrolled .navbar-logo a img{
+width: 55px;
 }
 
 
@@ -217,14 +222,17 @@ p {
 
 
     .navbar-toggle.active .toggle-line:nth-child(1) {
+        height: 1px;
         transform: rotate(45deg) translate(5px, 5px);
     }
 
     .navbar-toggle.active .toggle-line:nth-child(2) {
+        height: 1px;
         opacity: 0;
     }
 
     .navbar-toggle.active .toggle-line:nth-child(3) {
+        height: 1px;
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
@@ -780,6 +788,9 @@ a.stage {
 }
 
 @media (max-width: 768px) {
+    .f-logo img {
+        width: 76px;
+    }
     .hero-header h1 {
         line-height: inherit;
     }
@@ -838,7 +849,7 @@ a.stage {
     }
 
     .footer-content {
-        height: 180px;
+        height: auto;
     }
 
     .hero-header {
