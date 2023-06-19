@@ -192,7 +192,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .navbar-logo{
-        margin-left: 2.5%;
+        margin-left: 0;
     }
     .navbar-links {
         display: none;
@@ -200,7 +200,7 @@ p {
 
     .navbar-toggle {
 
-        margin-right: 6%;
+        margin-right: 3%;
 
         z-index: 9999;
         display: block;
