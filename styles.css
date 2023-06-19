@@ -6,11 +6,10 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("fonts/FontsFree-Net-Poppins-Regular.ttf") format("truetype");
+    src: url("fonts/Poppins-Regular.ttf") format("truetype");
 
 }
 
-@import url('https://fonts.cdnfonts.com/css/poppins');
 
 @font-face {
     font-family: "Thunder Bold";
@@ -59,9 +58,10 @@ section {
     position: relative;
     height: auto;
 }
-
+@media screen and (min-width: 1200px) {
 .wp {
-    font-size: 92px !important;
+    font-size: 92px;
+}
 }
 
 
@@ -98,7 +98,7 @@ p {
     margin: 0;
     line-height: 1.5rem;
     color: white;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
 }
@@ -772,7 +772,7 @@ a.stage {
 }
 
 .team-txt h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .team-txt p {
@@ -788,8 +788,12 @@ a.stage {
 }
 
 @media (max-width: 768px) {
+    .products {
+        padding-top: 12%;
+    }
     .f-logo img {
-        width: 76px;
+        width: 60px;
+        height: 66px;
     }
     .hero-header h1 {
         line-height: inherit;
@@ -834,9 +838,7 @@ a.stage {
         font-size: 1rem;
     }
 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
 }
 
 
@@ -872,6 +874,9 @@ a.stage {
 }
 
 @media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .content-left-text h1 {
         font-size: 1.5rem;
     }
@@ -896,11 +901,11 @@ a.stage {
 
     .navbar-logo a img {
         width: 60px;
-        height: 60px;
+        height: 66px;
     }
 
     .socials {
-        bottom: 80px;
+        bottom: 140px;
         width: 60%;
         position: absolute;
         left: 50%;
@@ -925,12 +930,12 @@ a.stage {
 
     .hero-section {
         background-size: cover;
-        height: 521px;
+        height: 660px;
         background-image: url('./media/mobile-bg.png');
     }
 
     .hero-header {
-        width: 58%;
+        width: 70%;
     }
 
     .hero-header h1 {
@@ -961,7 +966,9 @@ a.stage {
     .card-container {
         height: 600px;
     }
-
+.wp{
+    font-size: 3rem !important;
+}
     .section-title h1 {
         font-size: 28px;
     }
@@ -1023,7 +1030,7 @@ a.stage {
     }
 
     .section-content {
-        margin-top: 8dvh;
+        margin-top: 12vh;
     }
 
     .navbar-links.active a {
