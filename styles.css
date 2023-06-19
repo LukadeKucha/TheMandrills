@@ -191,6 +191,12 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+    .section-title {
+        margin-bottom: 0 !important;
+    }
+    .section-content {
+        margin-top: 8%;
+    }
     .navbar-logo{
         margin-left: 0;
     }
