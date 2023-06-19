@@ -588,12 +588,12 @@ a.stage {
     height: auto;
 }
 
-.section-content {
-    padding: 20px;
+.section-content {   
     text-align: center;
 }
 
 .section-title {
+    margin-top: 2%;
     text-align: left;
     margin-bottom: 20px;
 }
