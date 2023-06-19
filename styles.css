@@ -289,7 +289,7 @@ a.journy {
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
-    margin-top: 2%;
+    margin-top: 4%;
     color: white;
     font-weight: 700;
     line-height: 22px;
@@ -562,13 +562,12 @@ a.stage {
 }
 
 .roadmap-content {
-    width: 55%;
+    width: 49%;
     text-align: center;
     margin: 0 auto;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;    
     height: 80%;
 }
 
