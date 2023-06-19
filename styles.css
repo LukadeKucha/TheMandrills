@@ -631,7 +631,7 @@ a.stage {
     margin: 0 auto;
     display: flex;
     width: 90%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .f-right {
@@ -755,10 +755,11 @@ a.stage {
 }
 
 .team-txt p {
+    text-transform: uppercase;
+    font-family: 'Thunder Semi-Bold';
     color: #75737e;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
-
 .grid-item img {
     max-width: 100%;
     height: auto;
