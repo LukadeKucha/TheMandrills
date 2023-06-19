@@ -133,7 +133,7 @@ p {
 
 .navbar-links {
     width: 46%;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     align-items: center;
 }
@@ -338,7 +338,7 @@ a.journy:hover {
 
 .socials {
     bottom: 20px;
-    opacity: 0.8;
+    opacity: 0.6;
     position: relative;
     width: 30%;
     justify-content: space-evenly;
