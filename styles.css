@@ -127,7 +127,7 @@ p {
 }
 
 .navbar-logo img {
-    width: 80px;
+    width: 92px;
 }
 
 
@@ -256,10 +256,12 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(24, 24, 24, 0.7);
+    opacity: 0.8;
+    background-color: #181818;
 }
 
 .hero-header {
+    padding-top: 5%;
     position: relative;
     margin: 0 auto;
     width: 48%;
