@@ -60,6 +60,14 @@ section {
     height: auto;
 }
 
+.wp {
+    font-size: 92px !important;
+}
+
+#p2l{
+    width: 55px !important;
+}
+
 .section-content {
     margin: 0 auto;
     margin-top: 5%;
@@ -122,7 +130,7 @@ p {
 .navbar-logo {
     z-index: 9999;
     cursor: pointer;
-    margin-left: 5%;
+    margin-left: 4%;
 }
 
 .navbar-logo img {
@@ -231,7 +239,7 @@ p {
 /* hero-section */
 
 .hero-section {
-    height: 823px;
+    height: 832px;
     display: flex;
     flex-direction: column;
     background-image: url(./media/landing.png);
@@ -293,7 +301,7 @@ a.journy {
     color: white;
     font-weight: 700;
     line-height: 22px;
-    padding: 20px 40px;
+    padding: 18px 40px;
     background-color: #FB2576;
     border-radius: 30px;
     transition: all 0.5s ease-in-out;
@@ -336,6 +344,7 @@ a.journy:hover {
 }
 
 .socials {
+    margin-right: 20px;
     bottom: 20px;
     opacity: 0.6;
     position: relative;
@@ -394,6 +403,7 @@ a.stage {
 
 .txt1 h2,
 .txt2 h2 {
+    font-weight: 500;
     font-family: "Thunder Medium";
     font-size: 1.5rem;
 }
@@ -567,7 +577,7 @@ a.stage {
     margin: 0 auto;
     align-items: center;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     height: 80%;
 }
 
@@ -637,9 +647,10 @@ a.stage {
     width: 25%;
 }
 
-.f-logo img{
+.f-logo img {
     width: 92px;
 }
+
 .f-right a {
     color: #333;
     text-decoration: none;
