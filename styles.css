@@ -62,7 +62,7 @@ section {
 
 .section-content {
     margin: 0 auto;
-    margin-top: 7%;
+    margin-top: 5%;
     width: 90%;
 }
 
@@ -93,7 +93,6 @@ p {
     margin: 0;
     line-height: 1.5rem;
     color: white;
-    text-transform: uppercase;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -518,6 +517,7 @@ a.stage {
 }
 
 .content-left-text p {
+    text-transform: none;
     font-size: 1rem;
 }
 
@@ -546,7 +546,7 @@ a.stage {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.2;
+    opacity: 0.1;
     background: #FB2576;
     border-radius: inherit;
 }
@@ -574,7 +574,7 @@ a.stage {
 
 
 .roadmap-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Colab Section */
@@ -597,7 +597,7 @@ a.stage {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .colabs a {
@@ -638,6 +638,9 @@ a.stage {
     width: 25%;
 }
 
+.f-logo img{
+    width: 92px;
+}
 .f-right a {
     color: #333;
     text-decoration: none;
