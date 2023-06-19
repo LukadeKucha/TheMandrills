@@ -588,7 +588,7 @@ a.stage {
     height: auto;
 }
 
-.section-content {   
+.section-content {
     text-align: center;
 }
 
@@ -760,15 +760,25 @@ a.stage {
     color: #75737e;
     font-size: 1rem;
 }
+
 .grid-item img {
     max-width: 100%;
     height: auto;
 }
 
 @media (max-width: 768px) {
+    .hero-header h1 {
+        line-height: inherit;
+    }
+
+    a.journy {
+        margin-top: 0%;
+    }
+
     .navbar-logo img {
         width: 60px;
     }
+
     .hero-header h1 {
         font-size: 100px;
     }
