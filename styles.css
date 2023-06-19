@@ -100,13 +100,13 @@ p {
 }
 
 .navbar {
-    max-width: 1390px;
+    max-width: 1375px;
     margin: 0 auto;
     width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 32px;
     background-color: transparent;
     position: fixed;
     z-index: 9999;
@@ -132,8 +132,8 @@ p {
 
 
 .navbar-links {
-    width: 46%;
-    justify-content: space-around;
+    width: 48%;
+    justify-content: space-evenly;
     display: flex;
     align-items: center;
 }
