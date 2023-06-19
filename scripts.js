@@ -69,3 +69,31 @@ function toggleContent(contentId) {
 // Initially show the first content
 toggleContent('content-1');
 
+window.addEventListener('scroll', function () {
+    var navbar = document.getElementById('navbar');
+    var heroSectionHeight = document.querySelector('.products').offsetHeight;
+    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrolled > heroSectionHeight) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+
+document.getElementById("stage-popup").addEventListener("click", function (event) {
+    event.preventDefault();
+    var modal = document.getElementById("productModal");
+    var body = document.getElementsByTagName("body")[0];
+    modal.style.display = "flex";
+    body.classList.add("blur-background");
+    body.style.overflow = "hidden";
+});
+
+document.getElementsByClassName("close")[0].addEventListener("click", function () {
+    var modal = document.getElementById("productModal");
+    var body = document.getElementsByTagName("body")[0];
+    modal.style.display = "none";
+    body.classList.remove("blur-background");
+    body.style.overflow = "auto";
+});

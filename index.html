@@ -13,7 +13,7 @@
     <div class="container">
         <nav class="navbar" id="navbar">
             <div class="navbar-logo">
-                <a href="#"><img  src="./media/logo.png" alt="Logo"></a>
+                <a href="#"><img src="./media/logo.png" alt="Logo"></a>
             </div>
             <div class="navbar-toggle" onclick="toggleNavbar()">
                 <div class="toggle-line"></div>
@@ -22,8 +22,8 @@
             </div>
             <div class="navbar-links">
                 <a href="#prologue">prologue</a>
-                <a href="#mandrills&minerals">mandrills & minerals</a>
-                <a href="#whitelist&activities">whitelist & activities</a>
+                <a href="#mandrillsminerals">mandrills & minerals</a>
+                <a href="#whitelistactivities">whitelist & activities</a>
                 <a href="#colabprojects">collab projects</a>
             </div>
         </nav>
@@ -46,7 +46,8 @@
                 <a href=""><img class="img1" src="./media/social2.png"></a>
                 <a href="https://discord.gg/3mpVeVyRJD"><img src="./media/discord.png"></a>
                 <a href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
-                <a href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="img4" src="./media/yt.png"></a>
+                <a href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="img4"
+                        src="./media/yt.png"></a>
                 <a href="https://wildnetwork.medium.com/"><img src="./media/social1.png"></a>
             </div>
         </section>
@@ -58,7 +59,7 @@
                 <img src="/media/video.png" height="auto" width="100%">
             </div>
         </section>
-        <section class="mm-section" id="mandrills&minerals">
+        <section class="mm-section" id="mandrillsminerals">
             <div class="section-content">
                 <div class="text">
                     <div class="section-title">
@@ -80,7 +81,8 @@
                             4,444 Mandrills are snoozing gently in the wait of awaking, but no one knows yet, how many
                             of them will be brought to life, as it is up to the owners of the Blue Minerals to decide
                             whether they will sacrifice their unique and enchanted elements for the Mandrills or not.
-                            Who knows…<br>But we have to keep in mind that the Mandrills are one of the smartest creatures
+                            Who knows…<br>But we have to keep in mind that the Mandrills are one of the smartest
+                            creatures
                             in the #web3 space. By Mother Nature’s decision, they were crafted from the Blue Minerals to
                             fulfill their mission on the Flare Network’s lands.
                         </p>
@@ -93,7 +95,7 @@
         </section>
 
         <!-- Whitelist & Activities -->
-        <section class="section4" id="whitelist&activities">
+        <section class="section4" id="whitelistactivities">
             <div class="section-content">
                 <div class="section-title">
                     <h1>WHITELISTS & ACTIVITIES</h1>
@@ -158,17 +160,19 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="journy" style="display: flex;
-            width: 170px;
-            align-items: center;
-            justify-content: space-evenly; margin: 2% auto;"><img src="./media/discord.png">Join Discord</a>
+            <!-- <div class="discord"><a href="" class="journy" id="dc"><img src="./media/discord.png"><span> Join Discord</span></a></div> -->
+
+            <div class="component">
+                <img src="./media/discord.png" alt="Photo" class="discord">
+                <span class="join-discord">JOIN DISCORD</span>
+            </div>
 
             <!-- Wild products & Roadmap -->
             <div class="section-content">
                 <div class="roadmap">
                     <div class="roadmap-content">
                         <div style="margin: 0;" class="section-title">
-                            <h1 >WILD PRODUCTS & ROADMAP</h1>
+                            <h1>WILD PRODUCTS & ROADMAP</h1>
 
                         </div>
                         <p>Take the time to familiarize yourself with our Wild products and roadmap. There are many
@@ -223,7 +227,50 @@
     </div>
 
     <script src="scripts.js"></script>
+    <script>
+        var prevScrollPos = window.pageYOffset;
+        var navbar = document.getElementById("navbar");
+        var section2Offset = document.getElementById("prologue").offsetTop;
 
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+
+            // Scrolling down and below the first section
+            if (currentScrollPos > prevScrollPos && currentScrollPos > section2Offset) {
+                navbar.style.display = "flex"
+            }
+            // Scrolling up or not reached the second section
+            else {
+                navbar.style.display = "none"
+            }
+
+            if (currentScrollPos === 0) {
+                navbar.style.display = "flex";
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+        // Offset value to adjust scroll position (in pixels)
+        var scrollOffset = 100;
+
+        // Handle click events on navbar links
+        document.querySelectorAll('.navbar-links a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href');
+                var targetElement = document.querySelector(targetId);
+                if (targetElement) {
+
+                    var targetPosition = targetElement.offsetTop - scrollOffset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>

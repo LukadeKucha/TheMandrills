@@ -150,7 +150,7 @@
                         <div class="team-txt">
                             <h1>sandry lomidze</h1>
                             <p>founder</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -158,7 +158,7 @@
                         <div class="team-txt">
                             <h1>giorgi chomakashvili</h1>
                             <p>co-founder & ceo</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -166,7 +166,7 @@
                         <div class="team-txt">
                             <h1>Glenn Schniederss</h1>
                             <p>WEB 3</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -174,7 +174,7 @@
                         <div class="team-txt">
                             <h1>giorgi lezhava</h1>
                             <p>Animator</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -182,7 +182,7 @@
                         <div class="team-txt">
                             <h1>nikusha tetruashvili</h1>
                             <p>ui/ux designer</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -190,7 +190,7 @@
                         <div class="team-txt">
                             <h1>luka kutchaidze</h1>
                             <p>web developer</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -198,7 +198,7 @@
                         <div class="team-txt">
                             <h1>Yoska Shavtvaladze</h1>
                             <p>artist</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                     <div class="grid-item">
@@ -206,7 +206,7 @@
                         <div class="team-txt">
                             <h1>Giga jachvadze</h1>
                             <p>back-end developer</p>
-                            <img src="../media/twitter.png">
+                            <img src="../media/twitter.png" style="opacity: 0.5;">
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
                 <div class="f-socials" style="align-self: auto;">
                     <a href=""><img src="../media/social2.png"></a>
                     <a href="https://discord.gg/3mpVeVyRJD"><img src="../media/discord.png"></a>
-                    <a href="https://twitter.com/TheMandrillsNFT"><img src="../media/twitter.png"></a>
+                    <a href="https://twitter.com/TheMandrillsNFT"><img src="../media/twitter.png" style="opacity: 0.5;"></a>
                     <a href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img src="../media/yt.png"></a>
                     <a href="https://wildnetwork.medium.com/"><img src="../media/social1.png"></a>
                 </div>
@@ -234,34 +234,7 @@
 
     </div>
     <script>
-        window.addEventListener('scroll', function () {
-            var navbar = document.getElementById('navbar');
-            var heroSectionHeight = document.querySelector('.products').offsetHeight;
-            var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrolled > heroSectionHeight) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-
-        document.getElementById("stage-popup").addEventListener("click", function (event) {
-            event.preventDefault();
-            var modal = document.getElementById("productModal");
-            var body = document.getElementsByTagName("body")[0];
-            modal.style.display = "flex";
-            body.classList.add("blur-background");
-            body.style.overflow = "hidden";
-        });
-
-        document.getElementsByClassName("close")[0].addEventListener("click", function () {
-            var modal = document.getElementById("productModal");
-            var body = document.getElementsByTagName("body")[0];
-            modal.style.display = "none";
-            body.classList.remove("blur-background");
-            body.style.overflow = "auto";
-        });
 
     </script>
     <script src="../scripts.js"></script>
