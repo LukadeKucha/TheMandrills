@@ -112,7 +112,7 @@ p {
     padding: 32px;
     background-color: transparent;
     position: fixed;
-    z-index: 9999;
+    z-index: 9998;
     top: 0;
 
 }
@@ -737,8 +737,8 @@ a.stage {
     }
 
     .f-logo img {
-        width: 60px;
-        height: 66px;
+        width: 76px;
+        height: 82px;
     }
 
     .hero-header h1 {
@@ -984,18 +984,18 @@ a.stage {
 
 
     .navbar-toggle.active .toggle-line:nth-child(1) {
-        height: 1px;
-        transform: rotate(45deg) translate(5px, 5px);
+        height: 3px;
+        transform: rotate(45deg) translate(8px, 12px);
     }
 
     .navbar-toggle.active .toggle-line:nth-child(2) {
-        height: 1px;
+        height: 3px;
         opacity: 0;
     }
 
     .navbar-toggle.active .toggle-line:nth-child(3) {
-        height: 1px;
-        transform: rotate(-45deg) translate(7px, -7px);
+        height: 3px;
+        transform: rotate(-45deg) translate(4px, -6px);
     }
 
     .navbar-toggle.active+.navbar-links {
@@ -1015,6 +1015,15 @@ a.stage {
 }
 
 @media (max-width: 480px) {
+    #loading-screen img {
+        width: 120px;
+
+    }
+
+    #loading-screen p {
+        font-size: 32px;
+    }
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1063,11 +1072,12 @@ a.stage {
     }
 
     .img1 {
-        height: 14px;
+        width: 14px !important;
+        height: 24px !important;
     }
 
     .img4 {
-        height: 17px;
+        height: 17px !important;
     }
 
     .hero-section {
@@ -1077,7 +1087,7 @@ a.stage {
     }
 
     .hero-header {
-        width: 55%;
+        width: 65%;
     }
 
     .hero-header h1 {
@@ -1178,7 +1188,7 @@ a.stage {
     }
 
     .section-content {
-        margin-top: 12vh;
+        margin-top: 5vh;
     }
 
     .navbar-links.active a {
@@ -1207,8 +1217,6 @@ a.stage {
 }
 
 
-
-
 .component {
     cursor: pointer;
     display: flex;
@@ -1218,17 +1226,22 @@ a.stage {
     justify-content: space-between;
     width: 130px;
     height: 13px;
-    padding: 20px 40px;
+    padding: 28px 40px;
+    transition: all 0.5s ease-in-out;
     background-color: #fb2576;
 }
-  
-  .discord {
+
+.component:hover {
+    background-color: #931545;
+}
+
+.discord {
     align-self: center;
     width: 24px;
     height: 24px;
-  }
-  
-  .join-discord {
+}
+
+.join-discord {
     color: white;
     align-self: flex-start;
     line-height: 21px;
@@ -1236,4 +1249,50 @@ a.stage {
     font-family: 'Thunder Bold';
     text-transform: uppercase;
     text-decoration: none;
-  }
+}
+
+/* loadings screen */
+
+#loading-screen {
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0b071a
+}
+
+#loading-screen img {
+    animation: jump 1s infinite;
+    width: 160px;
+
+}
+
+#loading-screen p {
+    font-family: "Thunder Bold";
+    font-size: 3rem;
+    padding-top: 3rem;
+    line-height: 36.8px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container {
+    display: none;
+    transition: 1s all ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

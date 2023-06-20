@@ -1,3 +1,17 @@
+
+window.addEventListener('load', function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    var content = document.querySelector('.container');
+    loadingScreen.style.display= "flex";
+    setTimeout(function() {
+        // Hide the loading screen and show the content
+        loadingScreen.style.display = 'none';
+        content.style.display = 'block';
+      }, 1000);  
+
+  });
+
+  
 function toggleNavbar() {
     var navbarToggle = document.querySelector('.navbar-toggle');
     var navbarLinks = document.querySelector('.navbar-links');
