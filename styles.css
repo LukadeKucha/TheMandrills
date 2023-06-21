@@ -320,8 +320,8 @@ a.journy:hover {
     cursor: pointer;
 }
 
-.socials a img{
-   width: 90%;
+.socials a img {
+    width: 90%;
 }
 
 .video-container {
@@ -591,7 +591,7 @@ a.stage {
     opacity: 0.1;
 }
 
-footer{
+footer {
     margin-top: 8%;
 }
 
@@ -674,7 +674,7 @@ footer{
     background-color: black;
     border-radius: 30px;
     height: 378px;
-    width: 24%;
+    width: 23%;
 }
 
 .product-gif {
@@ -1021,6 +1021,10 @@ footer{
 }
 
 @media (max-width: 480px) {
+    .toggle-line {
+        width: 40px;
+    }
+
     #loading-screen img {
         width: 120px;
 
@@ -1184,6 +1188,7 @@ footer{
     }
 
     .wild-products {
+        margin-top: 12%;
         flex-wrap: wrap;
         height: 500px;
     }
@@ -1303,6 +1308,4 @@ footer{
     }
 }
 
-.team-txt img{
-
-}
+.team-txt img {}
