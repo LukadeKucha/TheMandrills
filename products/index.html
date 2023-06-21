@@ -8,6 +8,20 @@
     <link rel="icon" href="../media/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
     <title>The Mandrills</title>
+    <style>
+        @media screen and (max-width: 768px)
+        {
+.navbar-links {
+   display: flex;
+   width: inherit;
+   
+}
+
+.navbar-toggle{
+    display: none;
+}
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +30,7 @@
         <p>Loading...</p>
     </div>
     <div class="container">
-        <nav class="navbar" id="navbar">
+        <nav class="navbar" id="navbar" >
             <div class="navbar-logo">
                 <a href="../index.html"> <img src="../media/logo.png" alt="Logo"> </a>
             </div>
@@ -25,7 +39,7 @@
                 <div class="toggle-line"></div>
                 <div class="toggle-line"></div>
             </div>
-            <div class="navbar-links">
+            <div class="navbar-links" >
                 <a href="#">metaverse dashboard</a>
                 <a href="#">nfts</a>
                 <a href="#">roadmap</a>
@@ -148,7 +162,7 @@
                 <div class="section-title">
                     <h1>team</h1>
                 </div>
-                <div class="grid" style="margin-top:3%">
+                <div class="grid">
                     <div class="grid-item">
                         <img src="../media/team.png" alt="Photo 1">
                         <div class="team-txt">
@@ -239,7 +253,24 @@
     </div>
     <script>
 
+        var scrollOffset = 120;
 
+        // Handle click events on navbar links
+        document.querySelectorAll('.navbar-links a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href');
+                var targetElement = document.querySelector(targetId);
+                if (targetElement) {
+
+                    var targetPosition = targetElement.offsetTop - scrollOffset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
     <script src="../scripts.js"></script>
 </body>

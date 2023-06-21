@@ -109,7 +109,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px;
+    padding: 16px 32px;
     background-color: transparent;
     position: fixed;
     z-index: 9998;
@@ -320,6 +320,10 @@ a.journy:hover {
     cursor: pointer;
 }
 
+.socials a img{
+   width: 90%;
+}
+
 .video-container {
     margin-top: 3%;
     background-size: cover;
@@ -386,7 +390,6 @@ a.stage {
 /* WL & Activities */
 
 .card-container {
-    margin-top: 3%;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
@@ -558,7 +561,7 @@ a.stage {
 .section-title {
     margin-top: 2%;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .colabs {
@@ -582,12 +585,15 @@ a.stage {
 /* Footer */
 .line {
     width: 90%;
-    height: 5px;
+    height: 4px;
     margin: 3% auto;
     background-color: #ffff;
     opacity: 0.1;
 }
 
+footer{
+    margin-top: 8%;
+}
 
 .footer-content {
     padding: 2%;
@@ -668,7 +674,7 @@ a.stage {
     background-color: black;
     border-radius: 30px;
     height: 378px;
-    width: 23%;
+    width: 24%;
 }
 
 .product-gif {
@@ -706,7 +712,7 @@ a.stage {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-gap: 15px;
 }
 
 .team-txt {
@@ -1295,4 +1301,8 @@ a.stage {
     100% {
         transform: translateY(0);
     }
+}
+
+.team-txt img{
+
 }

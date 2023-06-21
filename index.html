@@ -135,7 +135,7 @@
                     <div class="card-content" id="content-2">
                         <div class="content-left">
                             <div class="content-left-text">
-                                <h1>PCAN YOU OPEN IT?!</h1>
+                                <h1>CAN YOU OPEN IT?!</h1>
                                 <p>Packed with enchanted prizes from our Road Map. Mastering a powerful spell with
                                     dedication and belief is the only key to unlocking it, once you achieve it you will
                                     be eligible to open The Mandrills' Box of Mystery in every 30 Days!</p>
@@ -206,7 +206,7 @@
                     <a href=""><img src="./media/colab5.png"></a>
                 </div>
                 <div class="btn-wrapper">
-                    <a href="" class="journy">APPLY FOR COLUB</a>
+                    <a href="" class="journy" style="margin-top: 0; margin-bottom: 6%;">APPLY FOR COLUB</a>
 
                 </div>
             </div>
@@ -237,6 +237,7 @@
         var section2Offset = document.getElementById("prologue").offsetTop;
 
         window.onscroll = function () {
+            navbar.style.display = "none";
             var currentScrollPos = window.pageYOffset;
 
             // Scrolling down and below the first section
@@ -255,7 +256,7 @@
             prevScrollPos = currentScrollPos;
         };
         // Offset value to adjust scroll position (in pixels)
-        var scrollOffset = 100;
+        var scrollOffset = 120;
 
         // Handle click events on navbar links
         document.querySelectorAll('.navbar-links a').forEach(function (link) {
