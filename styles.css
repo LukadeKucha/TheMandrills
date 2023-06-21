@@ -1188,14 +1188,13 @@ footer {
     }
 
     .wild-products {
-        margin-top: 12%;
+        margin-top: 12% !important;
         flex-wrap: wrap;
         height: 500px;
     }
 
     .product {
         width: 45%;
-        height: 160px;
     }
 
     .section-content {
