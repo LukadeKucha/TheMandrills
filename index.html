@@ -17,7 +17,7 @@
     <div class="container">
         <nav class="navbar" id="navbar">
             <div class="navbar-logo">
-                <a href="#"><img src="./media/logo.png" alt="Logo"></a>
+                <a href="#"><img src="./media/logo-b.png" alt="Logo"></a>
             </div>
             <div class="navbar-toggle" onclick="toggleNavbar()">
                 <div class="toggle-line"></div>
@@ -47,13 +47,24 @@
                 <span class="arrow"></span>
             </a>
             <div class="socials">
-                <a href=""><img class="img1" src="./media/social2.png"></a>
-                <a href="https://discord.gg/3mpVeVyRJD"><img src="./media/discord.png"></a>
-                <a href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
-                <a href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="img4"
-                        src="./media/yt.png"></a>
-                <a href="https://wildnetwork.medium.com/"><img src="./media/social1.png"></a>
+                <a href="#"
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img
+                        class="img1" src="./media/social2.png"></a>
+                <a href="#"
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link6', 'link7', 'link8', 'link9', 'link10']);"><img
+                        src="./media/discord.png"></a>
+                <a href="#"
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link11', 'link12', 'link13', 'link14', 'link15']);"><img
+                        src="./media/twitter.png"></a>
+                <a href="#"
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link16', 'link17', 'link18', 'link19', 'link20']);"><img
+                        class="img4" src="./media/yt.png"></a>
+                <a href="#"
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link21', 'link22', 'link23', 'link24', 'link25']);"><img
+                        src="./media/social1.png"></a>
             </div>
+            <div id="popup-box"></div>
+            <div class="overlay-2"></div>
         </section>
         <section class="video-section" id="prologue">
             <div class="section-content">
@@ -214,12 +225,13 @@
         <footer class="footer">
             <div class="line"></div>
             <div class="footer-content">
-                <div class="f-logo"><img src="./media/logo.png"></div>
+                <div class="f-logo"><img src="./media/logo-b.png"></div>
                 <div class="f-socials" style="align-self: auto;">
-                    <a target="_blank" href=""><img src="./media/social2.png"></a>
+                    <a href="" id="popup-link"><img src="./media/social2.png"></a>
                     <a target="_blank" href="https://discord.gg/3mpVeVyRJD"><img src="./media/discord.png"></a>
                     <a target="_blank" href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img src="./media/yt.png"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img
+                            src="./media/yt.png"></a>
                     <a target="_blank" href="https://wildnetwork.medium.com/"><img src="./media/social1.png"></a>
                 </div>
                 <div class="f-right">
@@ -232,29 +244,18 @@
 
     <script src="scripts.js"></script>
     <script>
-        var prevScrollPos = window.pageYOffset;
-        var navbar = document.getElementById("navbar");
-        var section2Offset = document.getElementById("prologue").offsetTop;
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            var firstSection = document.getElementById('hero-section');
 
-        window.onscroll = function () {
-            navbar.style.display = "none";
-            var currentScrollPos = window.pageYOffset;
-
-            // Scrolling down and below the first section
-            if (currentScrollPos > prevScrollPos && currentScrollPos > section2Offset) {
-                navbar.style.display = "flex"
+            if (window.pageYOffset >= firstSection.offsetTop) {
+                navbar.classList.remove('navbar-hidden');
+            } else {
+                navbar.classList.add('navbar-hidden');
             }
-            // Scrolling up or not reached the second section
-            else {
-                navbar.style.display = "none"
-            }
+        });
 
-            if (currentScrollPos === 0) {
-                navbar.style.display = "flex";
-            }
 
-            prevScrollPos = currentScrollPos;
-        };
         // Offset value to adjust scroll position (in pixels)
         var scrollOffset = 120;
 
@@ -275,6 +276,62 @@
             });
         });
 
+    </script>
+    <!-- Popup -->
+    <script>
+        function showPopup(projects, links) {
+            var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+            var popupBox = document.getElementById('popup-box');
+            popupBox.innerHTML = '';
+
+            var navbarToggle = document.querySelector('.navbar-toggle');
+
+            navbarToggle.style.display = 'none';
+
+            var overlay = document.querySelector('.overlay-2');
+            overlay.style.display = 'block';
+
+            var closeButton = document.createElement('img');
+            closeButton.className = 'close-button';
+            closeButton.src = './media/close.svg';
+
+            var logo = document.createElement('img');
+            logo.className = 'popup-logo';
+            logo.src = './media/logo-b.png';
+            popupBox.appendChild(logo);
+
+            closeButton.addEventListener('click', function () {
+                navbarToggle.style.display = "block";
+                overlay.style.display = "none";
+                popupBox.style.display = 'none';
+                document.body.classList.remove('popup-open'); // Remove the class to enable scrolling
+
+                if (windowWidth < 768) {
+                    logo.style.display = 'block';
+                    navbarToggle.style.display = 'block';
+                }
+                else{
+                    navbarToggle.style.display = 'none';
+                }
+            });
+            popupBox.appendChild(closeButton);
+
+            var linkList = document.createElement('ul');
+            for (var i = 0; i < projects.length; i++) {
+                var listItem = document.createElement('li');
+                var link = document.createElement('a');
+                link.href = links[i];
+                link.target = '_blank'; // Open link in a new tab or window
+                link.textContent = projects[i];
+                listItem.appendChild(link);
+                linkList.appendChild(listItem);
+            }
+
+            popupBox.appendChild(linkList);
+            popupBox.style.display = 'block';
+            document.body.classList.add('popup-open'); // Add the class to disable scrolling
+            document.body.style.overflowX = 'hidden';
+        }
     </script>
 </body>
 

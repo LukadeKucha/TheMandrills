@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS for the box */
+        #popup-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="socials">
+        <a href="#" onclick="showPopup(['Project A', 'Project B', 'Project C', 'Project D', 'Project E'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img class="img1" src="./media/social2.png"></a>
+        <a href="#" onclick="showPopup(['Project X', 'Project Y', 'Project Z'], ['link6', 'link7', 'link8']);"><img src="./media/discord.png"></a>
+        <a href="#" onclick="showPopup(['Project Alpha', 'Project Beta', 'Project Gamma'], ['link11', 'link12', 'link13']);"><img src="./media/twitter.png"></a>
+        <a href="#" onclick="showPopup(['Project One', 'Project Two'], ['link16', 'link17']);"><img class="img4" src="./media/yt.png"></a>
+        <a href="#" onclick="showPopup(['Project Foo', 'Project Bar'], ['link21', 'link22']);"><img src="./media/social1.png"></a>
+    </div>
+
+    <div id="popup-box"></div>
+
+    <script>
+        function showPopup(projects, links) {
+            var popupBox = document.getElementById('popup-box');
+            popupBox.innerHTML = '';
+
+            var linkList = document.createElement('ul');
+            for (var i = 0; i < projects.length; i++) {
+                var listItem = document.createElement('li');
+                var link = document.createElement('a');
+                link.href = links[i];
+                link.textContent = projects[i];
+                listItem.appendChild(link);
+                linkList.appendChild(listItem);
+            }
+
+            popupBox.appendChild(linkList);
+            popupBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

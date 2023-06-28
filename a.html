@@ -730,3 +730,28 @@ border-radius: 100px;
 </body>
 
 </html>
+
+
+var prevScrollPos = window.pageYOffset;
+var navbar = document.getElementById("navbar");
+var section2Offset = document.getElementById("prologue").offsetTop;
+
+window.onscroll = function () {
+    navbar.style.display = "none";
+    var currentScrollPos = window.pageYOffset;
+
+    // Scrolling down and below the first section
+    if (currentScrollPos > prevScrollPos && currentScrollPos > section2Offset) {
+        navbar.style.display = "flex"
+    }
+    // Scrolling up or not reached the second section
+    else {
+        navbar.style.display = "none"
+    }
+
+    if (currentScrollPos === 0) {
+        navbar.style.display = "flex";
+    }
+
+    prevScrollPos = currentScrollPos;
+};
