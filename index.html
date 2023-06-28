@@ -51,16 +51,16 @@
                     onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img
                         class="img1" src="./media/social2.png"></a>
                 <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link6', 'link7', 'link8', 'link9', 'link10']);"><img
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD']);"><img
                         src="./media/discord.png"></a>
                 <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link11', 'link12', 'link13', 'link14', 'link15']);"><img
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT']);"><img
                         src="./media/twitter.png"></a>
                 <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link16', 'link17', 'link18', 'link19', 'link20']);"><img
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg']);"><img
                         class="img4" src="./media/yt.png"></a>
                 <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link21', 'link22', 'link23', 'link24', 'link25']);"><img
+                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/']);"><img
                         src="./media/social1.png"></a>
             </div>
             <div id="popup-box"></div>
@@ -178,8 +178,10 @@
             <!-- <div class="discord"><a href="" class="journy" id="dc"><img src="./media/discord.png"><span> Join Discord</span></a></div> -->
 
             <div class="component">
-                <img src="./media/discord.png" alt="Photo" class="discord">
-                <span class="join-discord">JOIN DISCORD</span>
+                <a style="text-decoration: none;" href="https://discord.gg/3mpVeVyRJD" target="_blank">
+                    <img src="./media/discord.png" alt="Photo" class="discord">
+                    <span class="join-discord">JOIN DISCORD</span>
+                </a>
             </div>
 
             <!-- Wild products & Roadmap -->
@@ -217,7 +219,7 @@
                     <a href=""><img src="./media/colab5.png"></a>
                 </div>
                 <div class="btn-wrapper">
-                    <a href="" class="journy" style="margin-top: 0; margin-bottom: 6%;">APPLY FOR COLUB</a>
+                    <a class="journy" style="margin-top: 0; margin-bottom: 6%;">APPLY FOR COLUB</a>
 
                 </div>
             </div>
@@ -227,7 +229,7 @@
             <div class="footer-content">
                 <div class="f-logo"><img src="./media/logo-b.png"></div>
                 <div class="f-socials" style="align-self: auto;">
-                    <a href="" id="popup-link"><img src="./media/social2.png"></a>
+                    <a><img src="./media/social2.png"></a>
                     <a target="_blank" href="https://discord.gg/3mpVeVyRJD"><img src="./media/discord.png"></a>
                     <a target="_blank" href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
                     <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img
@@ -246,16 +248,25 @@
     <script>
         window.addEventListener('scroll', function () {
             var navbar = document.getElementById('navbar');
-            var firstSection = document.getElementById('hero-section');
+            var heroSection = document.getElementById('hero-section');
+            var videoSection = document.getElementById('prologue');
 
-            if (window.pageYOffset >= firstSection.offsetTop) {
-                navbar.classList.remove('navbar-hidden');
-            } else {
-                navbar.classList.add('navbar-hidden');
+            // Get the height of the hero section and the video section
+            var heroSectionHeight = heroSection.offsetHeight;
+            var videoSectionOffsetTop = videoSection.offsetTop;
+       
+            // Check if the scroll position is within the hero section
+            if (window.pageYOffset < heroSectionHeight) {
+                navbar.style.display = 'none'; // Hide the navbar
+            } else if(window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
+                navbar.style.display = 'flex'; // Show the navbar
             }
+
+
         });
+    </script>
 
-
+    <script>
         // Offset value to adjust scroll position (in pixels)
         var scrollOffset = 120;
 
@@ -310,7 +321,7 @@
                     logo.style.display = 'block';
                     navbarToggle.style.display = 'block';
                 }
-                else{
+                else {
                     navbarToggle.style.display = 'none';
                 }
             });
@@ -332,7 +343,9 @@
             document.body.classList.add('popup-open'); // Add the class to disable scrolling
             document.body.style.overflowX = 'hidden';
         }
+
     </script>
+
 </body>
 
 </html>

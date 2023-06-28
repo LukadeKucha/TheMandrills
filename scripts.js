@@ -99,7 +99,9 @@ document.getElementById("stage-popup").addEventListener("click", function (event
     var modal = document.getElementById("productModal");
     var body = document.getElementsByTagName("body")[0];
     modal.style.display = "flex";
-    body.classList.add("blur-background");
+   
+    var overlay = document.querySelector('.overlay-2');
+    overlay.style.display = 'block';
     body.style.overflow = "hidden";
 });
 
@@ -107,7 +109,9 @@ document.getElementsByClassName("close")[0].addEventListener("click", function (
     var modal = document.getElementById("productModal");
     var body = document.getElementsByTagName("body")[0];
     modal.style.display = "none";
-    body.classList.remove("blur-background");
+   
+    var overlay = document.querySelector('.overlay-2');
+    overlay.style.display = 'none';
     body.style.overflow = "auto";
 });
 
