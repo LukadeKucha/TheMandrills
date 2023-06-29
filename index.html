@@ -50,18 +50,12 @@
                 <a href="#"
                     onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img
                         class="img1" src="./media/social2.png"></a>
-                <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD', 'https://discord.com/invite/3mpVeVyRJD']);"><img
-                        src="./media/discord.png"></a>
-                <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT', 'https://twitter.com/TheMandrillsNFT']);"><img
-                        src="./media/twitter.png"></a>
-                <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg', 'https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg']);"><img
-                        class="img4" src="./media/yt.png"></a>
-                <a href="#"
-                    onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/', 'https://wildnetwork.medium.com/']);"><img
-                        src="./media/social1.png"></a>
+                <a target="_blank" href="https://discord.com/invite/3mpVeVyRJD">
+                    <img src="./media/discord.png"></a>
+                <a target="_blank" href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="img4"
+                        src="./media/yt.png"></a>
+                <a target="_blank" href="https://wildnetwork.medium.com/"><img src="./media/social1.png"></a>
             </div>
             <div id="popup-box"></div>
             <div class="overlay-2"></div>
@@ -219,7 +213,7 @@
                     <a href=""><img src="./media/colab5.png"></a>
                 </div>
                 <div class="btn-wrapper">
-                    <a class="journy" style="margin-top: 0; margin-bottom: 6%;">APPLY FOR COLUB</a>
+                    <a class="journy" style="margin-top: 0; margin-bottom: 6%;">APPLY FOR COLLAB</a>
 
                 </div>
             </div>
@@ -229,10 +223,10 @@
             <div class="footer-content">
                 <div class="f-logo"><img src="./media/logo-b.png"></div>
                 <div class="f-socials" style="align-self: auto;">
-                    <a><img src="./media/social2.png"></a>
+                    <a href="#"  onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img class="f1" src="./media/social2.png"></a>
                     <a target="_blank" href="https://discord.gg/3mpVeVyRJD"><img src="./media/discord.png"></a>
                     <a target="_blank" href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img
+                    <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="f4"
                             src="./media/yt.png"></a>
                     <a target="_blank" href="https://wildnetwork.medium.com/"><img src="./media/social1.png"></a>
                 </div>
@@ -254,11 +248,11 @@
             // Get the height of the hero section and the video section
             var heroSectionHeight = heroSection.offsetHeight;
             var videoSectionOffsetTop = videoSection.offsetTop;
-       
+
             // Check if the scroll position is within the hero section
             if (window.pageYOffset < heroSectionHeight) {
                 navbar.style.display = 'none'; // Hide the navbar
-            } else if(window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
+            } else if (window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
                 navbar.style.display = 'flex'; // Show the navbar
             }
 

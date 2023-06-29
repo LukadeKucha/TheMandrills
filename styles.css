@@ -605,6 +605,11 @@ a.stage {
     opacity: 0.1;
 }
 
+@media screen and (min-width: 1200px) {
+    footer {
+        margin-top: 1%;
+    }
+}
 footer {
     margin-top: 8%;
 }
@@ -795,13 +800,13 @@ footer {
 /* Product Modal */
 
 .modal {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;    
+    height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1105,14 +1110,16 @@ footer {
 
 
 @media screen and (max-width: 768px) {
-    .modal-content{
+    .modal-content {
         position: absolute;
         width: 90%;
         height: 93%;
     }
-    .close{
+
+    .close {
         top: 0;
     }
+
     .popup-logo {
         display: block;
     }
@@ -1242,9 +1249,7 @@ footer {
         font-size: 1rem;
     }
 
-    section#colabprojects {
-        padding-bottom: 65px;
-    }
+
 
     .f-logo {
         width: 10%;
@@ -1338,6 +1343,13 @@ footer {
 
 
 @media (max-width: 480px) {
+    .colab-section{
+        padding-bottom: 45px;
+    }
+    .navbar-scrolled .navbar-logo a img {
+        width: 100%;
+    }
+
     .toggle-line {
         width: 40px;
     }
@@ -1392,10 +1404,23 @@ footer {
     }
 
     .socials a img {
-
         width: 24px;
         height: 24px;
 
+    }
+
+    .f-socials a img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .f1 {
+        width: 14px !important;
+        height: 24px !important;
+    }
+
+    .f4 {
+        height: 17px !important;
     }
 
     .img1 {
@@ -1493,7 +1518,7 @@ footer {
     }
 
     .f-socials {
-        justify-content: space-around;
+        justify-content: space-evenly;
         position: absolute;
         bottom: 30px;
         width: 90%;

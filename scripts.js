@@ -132,3 +132,4 @@ popupClose.addEventListener('click', function (event) {
     event.preventDefault();
     popupOverlay.style.display = 'none';
 });
+
