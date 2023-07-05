@@ -386,7 +386,7 @@ a.stage {
 }
 
 .photo {
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     border-radius: 30px;
     background-repeat: no-repeat;
@@ -610,6 +610,7 @@ a.stage {
         margin-top: 1%;
     }
 }
+
 footer {
     margin-top: 8%;
 }
@@ -745,6 +746,27 @@ footer {
 .pr-tree {
     height: auto;
     background-image: url(media/xe.png);
+}
+
+#stage-popup {
+    cursor: pointer;
+    left: 34%;
+    top: 44%;
+}
+
+#stage-2 {
+    left: 58%;
+    top: 52%;
+}
+
+#stage-3 {
+    top: 64%;
+    left: 34%;
+}
+
+#stage-4 {
+    top: 73%;
+    left: 58%;
 }
 
 /* Team */
@@ -1343,9 +1365,19 @@ footer {
 
 
 @media (max-width: 480px) {
-    .colab-section{
+    .navbar.navbar-scrolled {
+        padding: 10px;
+    }
+
+    .f-logo img {
+        width: 60px;
+        height: 66px;
+    }
+
+    .colab-section {
         padding-bottom: 45px;
     }
+
     .navbar-scrolled .navbar-logo a img {
         width: 100%;
     }
@@ -1439,7 +1471,7 @@ footer {
     }
 
     .hero-header {
-        width: 65%;
+        width: 80%;
     }
 
     .hero-header h1 {
@@ -1457,6 +1489,7 @@ footer {
     }
 
     a.stage {
+        padding: 10px 30px;
         font-size: 0.8rem;
     }
 
@@ -1508,9 +1541,12 @@ footer {
 
     }
 
-
     .f-right {
-        width: 45%;
+        width: 55%;
+    }
+
+    .component {
+        padding: 20px 100px;
     }
 
     .footer-content {
@@ -1525,9 +1561,14 @@ footer {
 
     }
 
+    .arrow {
+        height: 16px;
+        width: 16px;
+    }
+
     .navbar {
 
-        padding: 10px 20px;
+        padding: 32px 20px;
     }
 
     .wild-products {
@@ -1606,6 +1647,13 @@ footer {
 
     .column img:nth-child(2) {
         rotate: 90deg;
+        width: 66px;
+        height: 66px;
+    }
+
+    .row img:nth-child(2) {
+        width: 36px;
+
     }
 
     .row {
@@ -1635,4 +1683,13 @@ footer {
         margin-top: 1rem;
     }
 
+    #stage-popup {    
+        left: 25%;
+        top: 43%;
+    }
+    #stage-3 {
+        top: 64%;
+        left: 22%;
+    }
+    
 }
