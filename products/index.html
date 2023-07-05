@@ -388,6 +388,27 @@
             document.body.style.overflowX = 'hidden';
         }
     </script>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('navbar');
+        var heroSection = document.getElementById('products');
+        var videoSection = document.getElementById('exchange');
+
+
+        var heroSectionHeight = heroSection.offsetHeight;
+        var videoSectionOffsetTop = videoSection.offsetTop;
+
+
+        if (window.pageYOffset < heroSectionHeight) {
+            navbar.style.display = 'none';
+        } else if (window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
+            navbar.style.display = 'flex';
+        }
+
+
+    });
+</script>
     <script src="../scripts.js"></script>
 </body>
 
