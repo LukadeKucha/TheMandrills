@@ -36,8 +36,8 @@
                 <div class="hero-header">
                     <h1 style="line-height: 90%;">THE MANDRILLS</h1>
                     <p style="font-weight: 500;">WEB3 SPACE FOR FREEDOM, EXCITEMENT, AND CREATIVITY
-                        <p style="font-weight: 500;">JOIN
-                            IN AND UNFOLD THE MYSTERY WITH US!</p>
+                    <p style="font-weight: 500;">JOIN
+                        IN AND UNFOLD THE MYSTERY WITH US!</p>
                     <a class="journy" href="products/">START THE JOURNEY</a>
                 </div>
 
@@ -226,7 +226,9 @@
             <div class="footer-content">
                 <div class="f-logo"><img src="./media/logo-b.png"></div>
                 <div class="f-socials" style="align-self: auto;">
-                    <a href="#"  onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img class="f1" src="./media/social2.png"></a>
+                    <a href="#"
+                        onclick="showPopup(['MINERALS', 'THE MANDRILLS', 'THE MANDRILLS STARTER PACKS', 'THE MANDRILLS COMIC SERIES', 'THE MANDRILLS WORLD'], ['link1', 'link2', 'link3', 'link4', 'link5']);"><img
+                            class="f1" src="./media/social2.png"></a>
                     <a target="_blank" href="https://discord.gg/3mpVeVyRJD"><img src="./media/discord.png"></a>
                     <a target="_blank" href="https://twitter.com/TheMandrillsNFT"><img src="./media/twitter.png"></a>
                     <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="f4"
@@ -248,15 +250,15 @@
             var heroSection = document.getElementById('hero-section');
             var videoSection = document.getElementById('prologue');
 
-            // Get the height of the hero section and the video section
+
             var heroSectionHeight = heroSection.offsetHeight;
             var videoSectionOffsetTop = videoSection.offsetTop;
 
-            // Check if the scroll position is within the hero section
+
             if (window.pageYOffset < heroSectionHeight) {
-                navbar.style.display = 'none'; // Hide the navbar
+                navbar.style.display = 'none';
             } else if (window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
-                navbar.style.display = 'flex'; // Show the navbar
+                navbar.style.display = 'flex';
             }
 
 
@@ -264,10 +266,7 @@
     </script>
 
     <script>
-        // Offset value to adjust scroll position (in pixels)
         var scrollOffset = 120;
-
-        // Handle click events on navbar links
         document.querySelectorAll('.navbar-links a').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -283,9 +282,8 @@
                 }
             });
         });
-
     </script>
-    <!-- Popup -->
+    <!-- Popup sparkles(old version) -->
     <script>
         function showPopup(projects, links) {
             var windowWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -312,7 +310,7 @@
                 navbarToggle.style.display = "block";
                 overlay.style.display = "none";
                 popupBox.style.display = 'none';
-                document.body.classList.remove('popup-open'); // Remove the class to enable scrolling
+                document.body.classList.remove('popup-open');
 
                 if (windowWidth < 768) {
                     logo.style.display = 'block';
@@ -329,7 +327,7 @@
                 var listItem = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = links[i];
-                link.target = '_blank'; // Open link in a new tab or window
+                link.target = '_blank';
                 link.textContent = projects[i];
                 listItem.appendChild(link);
                 linkList.appendChild(listItem);
@@ -337,7 +335,7 @@
 
             popupBox.appendChild(linkList);
             popupBox.style.display = 'block';
-            document.body.classList.add('popup-open'); // Add the class to disable scrolling
+            document.body.classList.add('popup-open');
             document.body.style.overflowX = 'hidden';
         }
 

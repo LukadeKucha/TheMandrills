@@ -189,7 +189,7 @@
                         <p>The Minerals are gaining their progressive utility in the Wild Network’s life</p>
                     </div>
                 </div>
-                <a id="stage-popup"  class="stage">Stage 1</a>
+                <a id="stage-popup" class="stage">Stage 1</a>
                 <a id="stage-2" class="stage">Stage 2</a>
                 <a id="stage-3" class="stage">Stage 3</a>
                 <a id="stage-4" class="stage">Stage 4</a>
@@ -249,7 +249,8 @@
                         <div class="team-txt">
                             <h1>nikusha tetruashvili</h1>
                             <p>ui/ux designer</p>
-                            <img src="../media/ball.png" style="opacity: 0.5;">
+                            <a href="
+                            https://dribbble.com/tetro18" target="_blank"><img src="../media/ball.png" style="opacity: 0.5;"> </a>
                         </div>
                     </div>
                     <div class="grid-item">
@@ -265,7 +266,10 @@
                         <div class="team-txt">
                             <h1>Yoska Shavtvaladze</h1>
                             <p>artist</p>
-                            <img src="../media/artstation.png" style="opacity: 0.5;">
+                            <a target="_blank" href="https://www.artstation.com/romanliluashvili?fbclid=IwAR3tkZ87yo0_eYUyNmsBFbeGQ9Lk_4bOPQgP-cRk52Ugz6Zh1Evbh6djjS0"
+                                ;>
+                                <img src="../media/artstation.png" style="opacity: 0.5;">
+                            </a>
                         </div>
                     </div>
                     <div class="grid-item">
@@ -273,7 +277,9 @@
                         <div class="team-txt">
                             <h1>Giga jachvadze</h1>
                             <p>back-end developer</p>
-                            <img src="../media/linkedin.png" style="opacity: 0.5;">
+                            <a target="_blank" href="https://www.linkedin.com/in/giga-jachvadze-856a141a6/?fbclid=IwAR0q44mhsNIjbm5afP8PCCNZAsd0t2dCxCKgemgiwc0sfiJD_Vim_jiteZI"
+                                ;>
+                                <img src="../media/linkedin.png" style="opacity: 0.5;"> </a>
                         </div>
                     </div>
                 </div>
@@ -291,8 +297,8 @@
                             class="f1" src="../media/social2.png"></a>
                     <a target="_blank" href="https://discord.gg/3mpVeVyRJD"><img src="../media/discord.png"></a>
                     <a target="_blank" href="https://twitter.com/TheMandrillsNFT"><img src="../media/twitter.png"></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img
-                            class="f4"    src="../media/yt.png"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCMZOtaHU0NyP9fNLnZ4HKcg"><img class="f4"
+                            src="../media/yt.png"></a>
                     <a target="_blank" href="https://wildnetwork.medium.com/"><img src="../media/social1.png"></a>
                 </div>
                 <div class="f-right">
@@ -304,6 +310,7 @@
 
 
     </div>
+    <!-- sparkles(old version) -->
     <script>
 
         var scrollOffset = 120;
@@ -352,7 +359,7 @@
                 navbarToggle.style.display = "block";
                 overlay.style.display = "none";
                 popupBox.style.display = 'none';
-                document.body.classList.remove('popup-open'); // Remove the class to enable scrolling
+                document.body.classList.remove('popup-open');
 
                 if (windowWidth < 768) {
                     logo.style.display = 'block';
@@ -369,7 +376,7 @@
                 var listItem = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = links[i];
-                link.target = '_blank'; // Open link in a new tab or window
+                link.target = '_blank'; 
                 link.textContent = projects[i];
                 listItem.appendChild(link);
                 linkList.appendChild(listItem);

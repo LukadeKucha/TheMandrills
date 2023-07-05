@@ -4,7 +4,6 @@ window.addEventListener('load', function () {
     var content = document.querySelector('.container');
     loadingScreen.style.display = "flex";
     setTimeout(function () {
-        // Hide the loading screen and show the content
         loadingScreen.style.display = 'none';
         content.style.display = 'block';
     }, 1000);
@@ -78,9 +77,8 @@ function toggleContent(contentId) {
     }
 }
 
-
-// Initially show the first content
 toggleContent('content-1');
+
 
 window.addEventListener('scroll', function () {
     var navbar = document.getElementById('navbar');
