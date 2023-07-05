@@ -119,13 +119,12 @@ var popupLink = document.getElementById('popup-link');
 var popupOverlay = document.getElementById('popup-overlay');
 var popupClose = document.getElementById('popup-close');
 
-// Open the popup when the link is clicked
+
 popupLink.addEventListener('click', function (event) {
     event.preventDefault();
     popupOverlay.style.display = 'block';
 });
 
-// Close the popup when the close button is clicked
 popupClose.addEventListener('click', function (event) {
     event.preventDefault();
     popupOverlay.style.display = 'none';
