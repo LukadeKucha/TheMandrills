@@ -391,6 +391,7 @@
 
 <script>
     window.addEventListener('scroll', function () {
+
         var navbar = document.getElementById('navbar');
         var heroSection = document.getElementById('products');
         var videoSection = document.getElementById('exchange');
@@ -403,6 +404,10 @@
         if (window.pageYOffset < heroSectionHeight) {
             navbar.style.display = 'none';
         } else if (window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
+            navbar.style.display = 'flex';
+        }
+
+        if (window.scrollY === 0 || window.scrollY === 638) {
             navbar.style.display = 'flex';
         }
 

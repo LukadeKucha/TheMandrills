@@ -246,6 +246,7 @@
     <script src="scripts.js"></script>
     <script>
         window.addEventListener('scroll', function () {
+
             var navbar = document.getElementById('navbar');
             var heroSection = document.getElementById('hero-section');
             var videoSection = document.getElementById('prologue');
@@ -258,6 +259,10 @@
             if (window.pageYOffset < heroSectionHeight) {
                 navbar.style.display = 'none';
             } else if (window.pageYOffset >= heroSectionHeight || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
+                navbar.style.display = 'flex';
+            }
+
+            if (window.scrollY === 0 || window.scrollY === 784) {
                 navbar.style.display = 'flex';
             }
 
